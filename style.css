@@ -2976,10 +2976,11 @@ html.dark-theme .gateway-countdown-badge {
 .gateway-mode-selector {
   flex: 1;
   min-width: 0;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 6px;
-  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 0 auto;
   background: transparent;
   padding: 0;
   border: none;
@@ -2996,9 +2997,14 @@ html.dark-theme .gateway-mode-selector {
     flex-wrap: wrap;
   }
   .gateway-mode-selector {
-    grid-template-columns: repeat(2, 1fr);
+    flex-direction: column;
     order: 2;
     width: 100%;
+    gap: 6px;
+  }
+  .gateway-mode-btn {
+    width: 100%;
+    max-width: 100%;
   }
   .gateway-modal-close {
     order: 1;
@@ -3008,7 +3014,9 @@ html.dark-theme .gateway-mode-selector {
 }
 
 .gateway-mode-btn {
-  padding: 10px 12px;
+  flex: 1;
+  max-width: 220px;
+  padding: 10px 14px;
   border-radius: 8px;
   border: 1px solid transparent;
   background: transparent;
