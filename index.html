@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="./style.css?v=7.5">
   <script src="./theme.js?v=7.5"></script>
   <script type="module" src="./booking.js?v=7.5"></script>
+  <script type="module" src="./proof-lightbox.js?v=1.0"></script>
 </head>
 <body>   <div class="background-glow glow-1"></div>   <div class="background-glow glow-2"></div>    <!-- Header / Navigation -->   <header class="navbar" id="navbar">     <div class="container nav-container">       <div class="nav-brand-group">         <a href="#" class="logo">           <img src="./favicon.svg" alt="Pax Fabrica" class="logo-favicon">           <span class="logo-text">Pax<span>.Fabrica</span></span>         </a>       </div>        <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">         ☰       </button>        <div class="nav-links-wrapper">         <nav style="flex: 1; display: flex; justify-content: center;">           <ul class="nav-links">             <li><a href="#solutions">Produit</a></li>             <li><a href="#offres">Offre</a></li>             <li><a href="#roi">ROI</a></li>             <li><a href="#faq">FAQ</a></li>             <li><a href="./tech.html" class="nav-btn-demo">Vue Technique ↗</a></li>             <li><a href="#rdv" class="nav-btn-cta">Tester votre DPGF — 490 €</a></li>           </ul>         </nav>          <div class="nav-controls">           <button class="theme-toggle-btn" type="button" aria-label="Passer au mode sombre" title="Passer au mode sombre">             <span class="theme-toggle-icon">🌙</span>           </button>         </div>       </div>     </div>   </header>    <main>     <!-- Hero Section -->     <section class="hero" id="hero">       <div class="hero-container">         <!-- Hero Brand Header -->         <div class="hero-brand-card">           <img src="./favicon.svg" alt="Pax Fabrica Emblem" class="hero-brand-icon">           <div class="hero-brand-title">Pax<span>.Fabrica</span></div>           <div class="hero-brand-divider"></div>           <div class="hero-brand-subtitle">IA documentaire pour le BTP</div>         </div>                  <h1 class="hero-title">           Vos DPGF PDF et Scans.<br><span class="gradient-text">Notre IA. Votre Excel prêt à travailler.</span>         </h1>         <p class="hero-desc">
           <span class="pax-wordmark">Pax<span class="pax-suffix-extract">.Extract</span></span> extrait les lignes, quantités, unités et montants de vos DPGF, BPU, DQE, détecte les anomalies, crée un Excel exploitable dans votre flux de travail existant et vous permet de retrouver chaque donnée dans son document source.
@@ -125,43 +126,155 @@
           <p class="section-subtitle"><span class="pax-wordmark">Pax<span class="pax-suffix-extract">.Extract</span></span> transforme le document brut en donnée structurée, détecte les anomalies et vous permet de retrouver chaque donnée dans son document source.</p>
         </div>
 
+        <!-- Interactive Step Progress Bar -->
+        <div class="proof-stepper-track" aria-label="Progression du document de l'entrée PDF à l'Excel final">
+          <div class="proof-step-nav active" data-step-target="0" role="button" tabindex="0" title="Étape 1 : Document Source (PDF)">
+            <span class="proof-step-dot">1</span>
+            <span class="proof-step-name">01. PDF Source</span>
+          </div>
+          <div class="proof-step-line"></div>
+          <div class="proof-step-nav" data-step-target="1" role="button" tabindex="0" title="Étape 2 : Pipeline & Extraction IA">
+            <span class="proof-step-dot">2</span>
+            <span class="proof-step-name">02. Extraction &amp; IA</span>
+          </div>
+          <div class="proof-step-line"></div>
+          <div class="proof-step-nav" data-step-target="2" role="button" tabindex="0" title="Étape 3 : Audit & Contrôles Métier">
+            <span class="proof-step-dot">3</span>
+            <span class="proof-step-name">03. Audit &amp; Contrôles</span>
+          </div>
+          <div class="proof-step-line"></div>
+          <div class="proof-step-nav" data-step-target="3" role="button" tabindex="0" title="Étape 4 : Restitution Excel Exploitable">
+            <span class="proof-step-dot">4</span>
+            <span class="proof-step-name">04. Excel Sortant</span>
+          </div>
+        </div>
+
+        <!-- 4-Step Progression Grid -->
         <div class="proof-flow">
-          <div class="glass-card proof-card">
-            <div class="proof-label">01 · DOCUMENT SOURCE</div>
-            <div class="proof-document">
-              <div class="proof-document-title">DPGF — Lot Menuiseries.pdf</div>
-              <div class="proof-lines">
-                <span>04.1 Bloc-porte PF1</span>
-                <span>12,00 U</span>
-                <span>04.2 Bloc-porte PF2</span>
-                <span>8,00 U</span>
-                <span>04.3 Ensemble vitré</span>
-                <span>⚠ Prix absent</span>
+          <!-- Step 1 -->
+          <div class="glass-card proof-card" data-proof-index="0" role="button" tabindex="0" aria-label="Agrandir l'étape 1 : Document source PDF">
+            <div>
+              <div class="proof-card-top">
+                <div class="proof-label">01 · SOURCE</div>
+                <span class="proof-step-pill">Entrée brute</span>
               </div>
-              <div class="proof-page">Page 18 / 42</div>
+              <h3 class="proof-card-title">Document Source (PDF)</h3>
+              <div class="proof-thumb-wrapper">
+                <img src="./img/1_pdf.png" alt="DPGF source multi-lots en format PDF" class="proof-thumb-img" loading="lazy">
+                <div class="proof-zoom-overlay">
+                  <span class="proof-zoom-btn">🔍 Cliquer pour zoomer</span>
+                </div>
+              </div>
+              <p class="proof-card-desc">DPGF ou BPU multi-lots complexe scanné/vectoriel. Les données sont extraites et structurées à partir du document source. Les éléments incertains sont signalés pour vérification.</p>
+            </div>
+            <div class="proof-tags">
+              <span class="proof-tag">PDF / Scans</span>
+              <span class="proof-tag">Multi-lots</span>
             </div>
           </div>
 
-          <div class="proof-arrow">→</div>
-
-          <div class="glass-card proof-card proof-result">
-            <div class="proof-label">02 · RÉSULTAT EXCEL &amp; TRAÇABILITÉ</div>
-            <div class="proof-spreadsheet">
-              <div class="spreadsheet-head"><span>Désignation</span><span>Qté</span><span>Unité</span><span>État</span></div>
-              <div><span>Bloc-porte PF1</span><span>12</span><span>U</span><span>✓ p.18</span></div>
-              <div><span>Bloc-porte PF2</span><span>8</span><span>U</span><span>✓ p.18</span></div>
-              <div class="spreadsheet-alert"><span>Ensemble vitré</span><span>—</span><span>U</span><span>⚠ p.18</span></div>
+          <!-- Step 2 -->
+          <div class="glass-card proof-card" data-proof-index="1" role="button" tabindex="0" aria-label="Agrandir l'étape 2 : Pipeline et extraction IA">
+            <div>
+              <div class="proof-card-top">
+                <div class="proof-label">02 · TRAITEMENT</div>
+                <span class="proof-step-pill">Temps réel</span>
+              </div>
+              <h3 class="proof-card-title">Pipeline &amp; Extraction IA</h3>
+              <div class="proof-thumb-wrapper">
+                <img src="./img/2_extract.png" alt="Interface de traitement Pax.Extract et progression OCR + LLM" class="proof-thumb-img" loading="lazy">
+                <div class="proof-zoom-overlay">
+                  <span class="proof-zoom-btn">🔍 Cliquer pour zoomer</span>
+                </div>
+              </div>
+              <p class="proof-card-desc">Numérisation OCR haute précision et extraction sémantique LLM bloc par bloc avec suivi de progression lot par lot en direct.</p>
             </div>
-            <div class="proof-source">↗ Traçabilité : DPGF — Lot Menuiseries.pdf · page 18</div>
+            <div class="proof-tags">
+              <span class="proof-tag">OCR + LLM</span>
+              <span class="proof-tag">Suivi direct</span>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="glass-card proof-card" data-proof-index="2" role="button" tabindex="0" aria-label="Agrandir l'étape 3 : Contrôles métier et détection d'anomalies">
+            <div>
+              <div class="proof-card-top">
+                <div class="proof-label">03 · CONTRÔLE</div>
+                <span class="proof-step-pill">Audit Qualité</span>
+              </div>
+              <h3 class="proof-card-title">Audit &amp; Détection d'Anomalies</h3>
+              <div class="proof-thumb-wrapper">
+                <img src="./img/3_rapport.png" alt="Rapport de contrôle qualité et détection des anomalies de calcul" class="proof-thumb-img" loading="lazy">
+                <div class="proof-zoom-overlay">
+                  <span class="proof-zoom-btn">🔍 Cliquer pour zoomer</span>
+                </div>
+              </div>
+              <p class="proof-card-desc">Contrôle arithmétique automatique (PU × Quantité), détection des points de vigilance et pointage direct de la page source.</p>
+            </div>
+            <div class="proof-tags">
+              <span class="proof-tag">Rapport</span>
+              <span class="proof-tag">Contrôle calculs</span>
+              <span class="proof-tag">Traçabilité page</span>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="glass-card proof-card" data-proof-index="3" role="button" tabindex="0" aria-label="Agrandir l'étape 4 : Restitution Excel exploitable">
+            <div>
+              <div class="proof-card-top">
+                <div class="proof-label">04 · RESTITUTION</div>
+                <span class="proof-step-pill">Livrable final</span>
+              </div>
+              <h3 class="proof-card-title">Excel Exploitable &amp; Structuré</h3>
+              <div class="proof-thumb-wrapper">
+                <img src="./img/4_excel.png" alt="Classeur Excel final structuré avec surlignage des anomalies" class="proof-thumb-img" loading="lazy">
+                <div class="proof-zoom-overlay">
+                  <span class="proof-zoom-btn">🔍 Cliquer pour zoomer</span>
+                </div>
+              </div>
+              <p class="proof-card-desc">Classeur .xlsx prêt pour le chiffrage : lignes normalisées, statuts de contrôle (« ok », « a_valider ») et surlignage couleur.</p>
+            </div>
+            <div class="proof-tags">
+              <span class="proof-tag">Format .xlsx</span>
+              <span class="proof-tag">Prêt à chiffrer</span>
+            </div>
           </div>
         </div>
 
         <div class="proof-caption">
           <strong>L’IA prépare le travail.</strong> Vous gardez la décision.
+          <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px; font-weight: 500;">
+            💡 Cliquez sur n'importe quelle capture pour l'agrandir en plein écran de manière fluide.
+          </div>
         </div>
         <p class="case-disclaimer" style="text-align: center; margin-top: 14px; font-size: 0.85rem; color: var(--text-muted); opacity: 0.85;">
-          Illustration du type de restitution attendu. Les performances réelles sont mesurées sur vos propres dossiers pendant le pilote.
+          Captures réelles du moteur <span class="pax-wordmark">Pax<span class="pax-suffix-extract">.Extract</span></span>. Les performances réelles sont mesurées sur vos propres dossiers pendant le pilote.
         </p>
+      </div>
+
+      <!-- Fluid Zoom Lightbox Modal -->
+      <div id="proofLightbox" class="proof-lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="proofLightboxTitle">
+        <div class="proof-lightbox-backdrop" id="proofLightboxBackdrop"></div>
+        <div class="proof-lightbox-dialog">
+          <div class="proof-lightbox-header">
+            <div class="proof-lightbox-title-group">
+              <span class="proof-lightbox-step" id="proofLightboxStep">Étape 01 / 04</span>
+              <h3 class="proof-lightbox-title" id="proofLightboxTitle">01 · Document source (PDF)</h3>
+            </div>
+            <div class="proof-lightbox-actions">
+              <button type="button" class="proof-lightbox-nav proof-prev" id="proofLightboxPrev" aria-label="Étape précédente">‹</button>
+              <button type="button" class="proof-lightbox-nav proof-next" id="proofLightboxNext" aria-label="Étape suivante">›</button>
+              <button type="button" class="proof-lightbox-close" id="proofLightboxClose" aria-label="Fermer la fenêtre">✕</button>
+            </div>
+          </div>
+          <div class="proof-lightbox-body">
+            <img id="proofLightboxImg" class="proof-lightbox-img" src="./img/1_pdf.png" alt="Capture d'écran de l'étape">
+          </div>
+          <div class="proof-lightbox-footer">
+            <p class="proof-lightbox-desc" id="proofLightboxDesc"></p>
+            <div class="proof-lightbox-dots" id="proofLightboxDots"></div>
+          </div>
+        </div>
       </div>
     </section>
 
