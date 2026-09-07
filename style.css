@@ -3393,20 +3393,26 @@ html[data-theme="dark"] .proof-step-pill {
 .proof-zoom-btn {
   background: rgba(255, 255, 255, 0.95);
   color: #120d1c;
-  font-size: 0.75rem;
-  font-weight: 600;
-  padding: 6px 12px;
-  border-radius: 999px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.28);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  justify-content: center;
   transform: translateY(4px);
-  transition: transform 0.25s ease;
+  transition: transform 0.25s ease, background 0.2s ease, color 0.2s ease;
 }
 
 .proof-card:hover .proof-zoom-btn {
   transform: translateY(0);
+}
+
+html.dark-theme .proof-zoom-btn,
+html[data-theme="dark"] .proof-zoom-btn {
+  background: rgba(25, 16, 35, 0.9);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .proof-card-desc {
