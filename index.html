@@ -314,8 +314,8 @@
         </div>
 
         <div class="journey-tiered-layout">
-          <!-- Row 1: Step 0 (Démo Directe Visio 15 min - Compact Discovery Bar) -->
-          <div class="glass-card journey-card journey-card-horizontal journey-card-0">
+          <!-- Row 1: Step 0 (Démo Directe Visio 15 min - Hidden) -->
+          <div class="glass-card journey-card journey-card-horizontal journey-card-0" style="display: none;">
             <div class="journey-card-left">
               <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px; flex-wrap: wrap;">
                 <div class="project-header-top" style="margin-bottom: 0;">
@@ -506,12 +506,12 @@
               <!-- Mode Toggle Switcher + Dynamic info box in the same frame -->
               <div class="gateway-mode-box">
                 <div class="gateway-mode-top-row">
-                  <!-- Mode Toggle Switcher with 4 options -->
+                  <!-- Mode Toggle Switcher with 3 options (1, 2, 3) -->
                   <div class="gateway-mode-selector">
-                    <button type="button" class="gateway-mode-btn mode-demo active" id="modeBtnDemo">
+                    <button type="button" class="gateway-mode-btn mode-demo" id="modeBtnDemo" style="display: none;">
                       <span>🖥️ 0. Démo 15 min</span>
                     </button>
-                    <button type="button" class="gateway-mode-btn mode-pilote" id="modeBtnPilote">
+                    <button type="button" class="gateway-mode-btn mode-pilote active" id="modeBtnPilote">
                       <span>⏱️ 1. Pilote 48 h</span>
                     </button>
                     <button type="button" class="gateway-mode-btn mode-deploy" id="modeBtnDeploy">
@@ -527,8 +527,8 @@
                 </div>
                 <!-- Dynamic info integrated into the same box under the buttons -->
                 <div class="gateway-mode-info">
-                  <h4 class="gateway-mode-info-title" id="gatewayModalTitle">0. Démo Directe en Visio (15 min)</h4>
-                  <p class="gateway-mode-info-subtitle" id="gatewayModalSubtitle">Découvrez l'outil en direct sur un DPGF type et posez vos questions techniques ou métier.</p>
+                  <h4 class="gateway-mode-info-title" id="gatewayModalTitle">1. Lancer votre Pilote Flash 48 h (490 € net)</h4>
+                  <p class="gateway-mode-info-subtitle" id="gatewayModalSubtitle">Déposez vos DPGF, BPU, DQE ou scans. Livraison sous 48h du fichier Excel structuré et du rapport d'anomalies (100 % déduit de l'Outil Métier).</p>
                 </div>
               </div>
 
@@ -537,9 +537,9 @@
                 <input type="text" name="website_url" style="display:none !important;" tabindex="-1" autocomplete="off">
 
                 <div class="gateway-form-grid">
-                  <div class="gateway-input-group" id="gatewaySlotGroup">
+                  <div class="gateway-input-group" id="gatewaySlotGroup" style="display: none;">
                     <label for="gatewaySlotSelect" id="gatewaySlotLabel" class="gateway-label">1. Créneau de démo disponible *</label>
-                    <select id="gatewaySlotSelect" name="slotId" class="gateway-select" required>
+                    <select id="gatewaySlotSelect" name="slotId" class="gateway-select">
                       <option value="">Chargement des créneaux en direct...</option>
                     </select>
                   </div>
@@ -561,8 +561,8 @@
                 </div>
 
                 <!-- DPGF PDF/Excel File Upload Dropzone -->
-                <div class="gateway-file-wrapper" id="gatewayDropzoneGroup" style="display: none;">
-                  <label class="gateway-label" id="gatewayFileLabel">5. Joindre vos dossiers DPGF, BPU, DQE ou scans (PDF, Excel ou Image, max 50 Mo)</label>
+                <div class="gateway-file-wrapper" id="gatewayDropzoneGroup">
+                  <label class="gateway-label" id="gatewayFileLabel">5. Joindre vos dossiers DPGF, BPU, DQE ou scans (PDF, Excel ou Image, max 50 Mo) *</label>
                   <div class="gateway-file-dropzone" id="gatewayFileDropzone" onclick="document.getElementById('gatewayPdfInput').click()">
                     <div class="gateway-file-icon">📄</div>
                     <div class="gateway-file-text">Cliquez ou glissez-déposez vos fichiers (PDF, Excel, Scans JPG/PNG) ici</div>
@@ -574,7 +574,7 @@
 
                 <!-- Message / Notes text area -->
                 <div class="gateway-input-group" id="gatewayMessageGroup" style="margin-top: 16px;">
-                  <label for="gatewayMessageInput" id="gatewayMessageLabel" class="gateway-label">5. Un message à nous faire parvenir ? (Optionnel)</label>
+                  <label for="gatewayMessageInput" id="gatewayMessageLabel" class="gateway-label">6. Précisions sur votre dossier (Optionnel)</label>
                   <textarea id="gatewayMessageInput" name="message" class="gateway-input" rows="3" placeholder="Précisez votre demande, vos questions ou particularités..." style="resize: vertical; font-family: inherit;"></textarea>
                 </div>
 
@@ -583,7 +583,7 @@
 
                 <div class="gateway-actions">
                   <button type="submit" id="btnSubmitGatewayBooking" class="btn btn-primary btn-lg" style="width: 100%;">
-                    <span>Valider ma demande</span>
+                    <span>Transmettre les fichiers &amp; Lancer le Pilote 48h</span>
                   </button>
                 </div>
               </form>

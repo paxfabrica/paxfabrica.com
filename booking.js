@@ -113,14 +113,14 @@ export function initBookingGateway(root = document, { apiBaseUrl = DEFAULT_API_U
     deploy: byId('modeBtnDeploy'), contact: byId('modeBtnContact'),
   };
 
-  let currentMode = 'demo';
+  let currentMode = 'pilote';
   let turnstileToken = 'mock-valid-token';
   let selectedFiles = [];
   if (typeof window !== 'undefined') window.onTurnstileSuccess = (t) => { turnstileToken = t; };
 
   function setMode(mode) {
     currentMode = mode;
-    const cfg = MODE_CONFIGS[mode] || MODE_CONFIGS.demo;
+    const cfg = MODE_CONFIGS[mode] || MODE_CONFIGS.pilote;
     Object.entries(modeBtns).forEach(([k, btn]) => btn?.classList.toggle('active', k === mode));
     if (modalTitle) modalTitle.textContent = cfg.title;
     if (modalSubtitle) modalSubtitle.textContent = cfg.subtitle;
@@ -132,7 +132,7 @@ export function initBookingGateway(root = document, { apiBaseUrl = DEFAULT_API_U
     if (submitBtn) submitBtn.innerHTML = cfg.submitHtml;
   }
 
-  const openModal = (mode = 'demo') => {
+  const openModal = (mode = 'pilote') => {
     setMode(mode);
     overlay?.classList.add('active');
     overlay?.setAttribute('aria-hidden', 'false');
