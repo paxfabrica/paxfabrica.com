@@ -76,18 +76,18 @@ export async function confirmBookingByToken(apiBaseUrl = DEFAULT_API_URL, token 
 const MODE_CONFIGS = {
   demo: {
     title: '0. Démo Directe en Visio (15 min)', subtitle: 'Découvrez l\'outil en direct sur un DPGF type et posez vos questions techniques ou métier.',
-    showSlot: true, slotLabel: '1. Créneau de démo disponible *', showDropzone: false,
-    messageLabel: '5. Un message à nous faire parvenir ? (Optionnel)', submitHtml: '<span>Confirmer la réservation de Démo (15 min)</span>',
+    showSlot: true, slotLabel: '1. Créneau de démo disponible *', showDropzone: false, messageLabel: '5. Un message à nous faire parvenir ? (Optionnel)',
+    submitHtml: '<span>Confirmer la réservation de Démo (15 min)</span>',
   },
   pilote: {
     title: '1. Lancer votre Pilote Flash 48 h (490 € net)', subtitle: 'Déposez vos DPGF, BPU, DQE ou scans. Livraison sous 48h du fichier Excel structuré et du rapport d\'anomalies (100 % déduit de l\'Outil Métier).',
-    showSlot: false, showDropzone: true, fileLabel: '5. Joindre vos dossiers DPGF, BPU, DQE ou scans (PDF, Excel ou Image, max 50 Mo) *',
-    messageLabel: '6. Précisions sur votre dossier (Optionnel)', submitHtml: '<span>Transmettre les fichiers &amp; Lancer le Pilote 48h</span>',
+    showSlot: false, showDropzone: true, fileLabel: '5. Joindre vos dossiers DPGF, BPU, DQE ou scans (PDF, Excel ou Image, max 50 Mo) *', messageLabel: '6. Précisions sur votre dossier (Optionnel)',
+    submitHtml: '<span>Transmettre les fichiers &amp; Lancer le Pilote 48h</span>',
   },
   deploy: {
     title: '2. Mise en Production de Votre Outil Métier', subtitle: 'Déploiement de votre espace web privé dédié (2 990 € net — 50 % d\'acompte à la commande — Pilote 490 € déduit — 1 an de service inclus).',
-    showSlot: false, showDropzone: true, fileLabel: '5. Joindre un cahier des charges, trame type ou scan (PDF, Excel ou Image, max 50 Mo)',
-    messageLabel: '6. Précisions sur vos volumes ou vos besoins d\'intégration (Optionnel)', submitHtml: '<span>Échanger pour déployer l\'Outil Métier</span>',
+    showSlot: false, showDropzone: true, fileLabel: '5. Joindre un cahier des charges, trame type ou scan (PDF, Excel ou Image, max 50 Mo)', messageLabel: '6. Précisions sur vos volumes ou vos besoins d\'intégration (Optionnel)',
+    submitHtml: '<span>Échanger pour déployer l\'Outil Métier</span>',
   },
   contact: {
     title: '3. Extensions & Automatisation Sur-Mesure', subtitle: 'Recherche dans les archives CCTP/DTU, connecteurs logiciels, workflows sur-mesure.',
@@ -105,6 +105,7 @@ export function initBookingGateway(root = document, { apiBaseUrl = DEFAULT_API_U
   const messageInput = byId('gatewayMessageInput'), messageLabel = byId('gatewayMessageLabel');
   const modalTitle = byId('gatewayModalTitle'), modalSubtitle = byId('gatewayModalSubtitle');
   const feedback = byId('gatewayFeedback'), submitBtn = byId('btnSubmitGatewayBooking');
+  if (submitBtn) { submitBtn.disabled = true; submitBtn.classList.add('btn-disabled'); submitBtn.setAttribute('aria-disabled', 'true'); }
   const dropzone = byId('gatewayFileDropzone'), fileInput = byId('gatewayPdfInput'), fileDisplay = byId('gatewayFileSelectedDisplay');
   const honeypotInput = root.querySelector('input[name="website_url"]');
 
@@ -129,18 +130,19 @@ export function initBookingGateway(root = document, { apiBaseUrl = DEFAULT_API_U
     if (dropzoneGroup) dropzoneGroup.style.display = cfg.showDropzone ? '' : 'none';
     if (fileLabel && cfg.fileLabel) fileLabel.textContent = cfg.fileLabel;
     if (messageLabel) messageLabel.textContent = cfg.messageLabel;
-    if (submitBtn) submitBtn.innerHTML = cfg.submitHtml;
+    if (submitBtn) {
+      submitBtn.innerHTML = cfg.submitHtml;
+      submitBtn.disabled = true; submitBtn.classList.add('btn-disabled'); submitBtn.setAttribute('aria-disabled', 'true');
+    }
   }
 
   const openModal = (mode = 'pilote') => {
     setMode(mode);
-    overlay?.classList.add('active');
-    overlay?.setAttribute('aria-hidden', 'false');
+    overlay?.classList.add('active'); overlay?.setAttribute('aria-hidden', 'false');
     if (typeof document !== 'undefined' && document.body) document.body.style.overflow = 'hidden';
   };
   const closeModal = () => {
-    overlay?.classList.remove('active');
-    overlay?.setAttribute('aria-hidden', 'true');
+    overlay?.classList.remove('active'); overlay?.setAttribute('aria-hidden', 'true');
     if (typeof document !== 'undefined' && document.body) document.body.style.overflow = '';
   };
 
@@ -162,11 +164,8 @@ export function initBookingGateway(root = document, { apiBaseUrl = DEFAULT_API_U
 
   function renderFilesList() {
     if (!fileDisplay) return;
-    if (selectedFiles.length === 0) {
-      fileDisplay.style.display = 'none'; fileDisplay.innerHTML = ''; return;
-    }
-    fileDisplay.style.display = 'flex';
-    fileDisplay.style.flexDirection = 'column';
+    if (selectedFiles.length === 0) { fileDisplay.style.display = 'none'; fileDisplay.innerHTML = ''; return; }
+    fileDisplay.style.display = 'flex'; fileDisplay.style.flexDirection = 'column';
     fileDisplay.innerHTML = selectedFiles.map((f, idx) => `
       <div class="gateway-file-item" style="display:flex;align-items:center;justify-content:space-between;padding:5px 8px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:6px;margin-bottom:3px;font-size:0.8rem;">
         <span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:85%;">📄 ${f.name} <span style="opacity:0.65;">(${(f.size / 1024).toFixed(1)} Ko)</span></span>
@@ -200,12 +199,12 @@ export function initBookingGateway(root = document, { apiBaseUrl = DEFAULT_API_U
   }
 
   if (typeof window !== 'undefined') {
-    window.addEventListener('dragover', (e) => overlay?.classList.contains('active') && e.preventDefault());
-    window.addEventListener('drop', (e) => overlay?.classList.contains('active') && e.preventDefault());
+    ['dragover', 'drop'].forEach((evt) => window.addEventListener(evt, (e) => overlay?.classList.contains('active') && e.preventDefault()));
   }
 
   form?.addEventListener('submit', async (e) => {
     e.preventDefault();
+    if (submitBtn?.disabled) return;
     const values = {
       mode: currentMode, slotId: slotSelect?.value || '', name: nameInput?.value || '',
       email: emailInput?.value || '', company: companyInput?.value || '', message: messageInput?.value || '',
@@ -239,7 +238,7 @@ export function initBookingGateway(root = document, { apiBaseUrl = DEFAULT_API_U
     } catch (err) {
       feedback.className = 'gateway-feedback-banner error';
       feedback.textContent = `❌ ${err.message}`;
-      if (submitBtn) submitBtn.disabled = false;
+      if (submitBtn) submitBtn.disabled = true;
     }
   });
 }

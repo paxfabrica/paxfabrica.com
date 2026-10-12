@@ -2313,10 +2313,21 @@ html.dark-theme .pill-evolution, html[data-theme="dark"] .pill-evolution {
   width: 100%;
 }
 
-.btn-disabled {
-  cursor: not-allowed;
-  opacity: 0.6;
+.btn-disabled,
+.btn:disabled,
+button:disabled {
+  cursor: not-allowed !important;
+  opacity: 0.6 !important;
+  box-shadow: none !important;
+  transform: none !important;
   border-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-disabled:hover,
+.btn:disabled:hover,
+button:disabled:hover {
+  box-shadow: none !important;
+  transform: none !important;
 }
 
 /* Pillars Grid & Stack Table Styles */
