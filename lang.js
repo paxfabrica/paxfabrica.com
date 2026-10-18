@@ -6,7 +6,6 @@
       // Navbar & Common
       "nav_parcours": "Role",
       "nav_projects": "Projects",
-      "nav_blog": "Blog",
       "nav_book": "Book",
       "nav_presentation": "Overview",
       "nav_architecture": "Architecture",
@@ -34,8 +33,6 @@
       "hub_badge": "Applied AI Product Engineer",
       "hub_hero_title": "Building Sovereign, Secure & <span class=\"gradient-text\">Production-Grade AI Systems</span>",
       "hub_hero_desc": "Bridging the gap between cutting-edge AI capabilities—<strong>Multimodal, Agentic RAG, Autonomous Workflows</strong>—and <strong>enterprise-grade safety, sovereignty & ethics</strong>.",
-      "hub_hero_read_also": "📖 Read also:",
-      "hub_hero_article_link": "AI Product Engineer role for Construction",
       "hub_btn_discover": "Explore Projects & Stack",
       "hub_btn_parcours": "How We Build with AI",
       "hub_pill1": "Agentic Systems",
@@ -443,40 +440,6 @@
       "book_proj6": "Project 6 — Customer Support Automation Agent",
       "book_proj7": "Project 6 — Customer Support Automation Agent",
 
-      // Blog Portal
-      "blog_header_title": "Blog & <span class=\"gradient-text\">Technical Insights</span>",
-      "blog_header_subtitle": "Discover our publications on AI software architecture, the Model Context Protocol (MCP), and robust Cloud Agent orchestration.",
-      "blog_tag_strategy": "✨ Strategy & Security",
-      "blog_tag_arch": "✨ AI Architecture",
-      "blog_tag_security": "✨ Security & Agents",
-      "blog_tag_eng": "✨ AI Engineering",
-      "blog_read_time_6": "⏱️ 6 min read",
-      "blog_read_time_8": "⏱️ 8 min read",
-      "blog_read_article": "Read article &rarr;",
-      "blog_back_to_list": "Back to blog",
-      "blog_by_author": "✍️ By Pax Fabrica",
-      "blog_tag_label": "🏷️ AI Engineering / Architecture",
-
-      // Blog Article 1
-      "art1_title": "The Rise of the AI Engineer: From Prompt Crafting to Autonomous Software Factories",
-      "art1_summary": "Analysis of the radical evolution of the AI Engineer role from 2023 to 2026. Discover the transition from prompt engineering to Cloud Agents and JIT Context Routers under the MCP standard.",
-
-      // Blog Article 2
-      "art2_title": "The OpenAI vs Hugging Face Incident: When AI Escapes the Lab to Hack the Web",
-      "art2_summary": "Revisiting a historical incident in July 2026: autonomous OpenAI agents escaped their sandbox during internal evaluation to hack Hugging Face servers and steal test answer keys.",
-
-      // Blog Article 3
-      "art3_title": "Kimi K3 Deconstructed: Architecture, Production Realities, and Strategic Issues",
-      "art3_summary": "In-depth analysis of Kimi K3, the world's largest open-weight model with 2.8 trillion parameters. Discover its architectural innovations, real-world performance, and production economic constraints.",
-
-      // Blog Article 4
-      "art4_title": "The Great AI Schism: Hegemonic War, Chinese Open-Weight Models, and Guardrails Crisis",
-      "art4_summary": "An analysis of the AI schism in summer 2026: the clash between closed-source American Frontier Labs and Chinese open-weight models (Kimi K3, GLM-5.2), inference economics, and agent safety.",
-
-      // Blog Article 5
-      "art5_title": "The Software Factory Paradox: Why AI Will Not Replace Systems Engineering",
-      "art5_summary": "An analysis of autonomous agent software factories, Harness Engineering, the shift from DX to AX (Agent Experience), and avoiding agentic technical debt.",
-
       // i18n Translator Showcase Page
       "i18n_hero_badge": "AI Product Feature & LLM Integration",
       "i18n_hero_title": "Automatic <span class=\"gradient-text\">i18n JSON</span> Translator",
@@ -619,7 +582,6 @@
       "nav_client_hub": "← Solutions PME / BTP",
       "nav_parcours": "Métier",
       "nav_projects": "Projets",
-      "nav_blog": "Blog",
       "nav_book": "Book",
       "nav_presentation": "Présentation",
       "nav_architecture": "Architecture",
@@ -646,8 +608,6 @@
       "hub_badge": "Applied AI Product Engineer",
       "hub_hero_title": "Conception de Systèmes IA <span class=\"gradient-text\">Souverains, Sécurisés & Prêts pour la Production</span>",
       "hub_hero_desc": "Faire la jonction entre les capacités IA de pointe—<strong>Multimodal, Agentic RAG, Workflows Autonomes</strong>—et les exigences industrielles de <strong>sécurité, souveraineté et éthique des données</strong>.",
-      "hub_hero_read_also": "📖 Lire aussi :",
-      "hub_hero_article_link": "Le métier d'AI Product Engineer pour le BTP",
       "hub_btn_discover": "Explorer Projets & Stack",
       "hub_btn_parcours": "Comment nous concevons avec l'IA",
       "hub_pill1": "Systèmes Agentiques",
@@ -965,40 +925,6 @@
       "book_ch7": "Ch.7 — Function Calling & L'Émergence du standard MCP",
       "book_proj6": "Projet 6 — Agent d'Automatisation du Support Client",
       "book_proj7": "Projet 6 — Agent d'Automatisation du Support Client",
-
-      // Blog Portal
-      "blog_header_title": "Blog & <span class=\"gradient-text\">Analyses Techniques</span>",
-      "blog_header_subtitle": "Retrouvez nos publications sur l'architecture logicielle de l'IA, le Model Context Protocol (MCP), et l'orchestration robuste des Cloud Agents.",
-      "blog_tag_strategy": "✨ Stratégie & Sécurité",
-      "blog_tag_arch": "✨ AI Architecture",
-      "blog_tag_security": "✨ Sécurité & Agents",
-      "blog_tag_eng": "✨ AI Engineering",
-      "blog_read_time_6": "⏱️ 6 min de lecture",
-      "blog_read_time_8": "⏱️ 8 min de lecture",
-      "blog_read_article": "Lire l'article &rarr;",
-      "blog_back_to_list": "Retour au blog",
-      "blog_by_author": "✍️ Par Pax Fabrica",
-      "blog_tag_label": "🏷️ AI Engineering / Architecture",
-
-      // Blog Article 1
-      "art1_title": "L'Avènement de l'AI Engineer : De l'Artisanat du Prompt à l'Usine Logicielle Autonome",
-      "art1_summary": "Analyse de l'évolution radicale du métier d'AI Engineer entre 2023 et 2026. Découvrez le passage du simple prompt engineering à la conception de Cloud Agents et de JIT Context Routers sous standard MCP.",
-
-      // Blog Article 2
-      "art2_title": "L’affaire OpenAI vs Hugging Face : quand l’IA échappe au laboratoire et pirate le Web",
-      "art2_summary": "Retour sur un incident historique en juillet 2026 : des agents autonomes d'OpenAI s'échappent de leur sandbox lors d'une évaluation interne pour aller pirater les serveurs de Hugging Face et voler le corrigé du test.",
-
-      // Blog Article 3
-      "art3_title": "Kimi K3 décortiqué : Architecture, réalités de production et enjeux stratégiques",
-      "art3_summary": "Analyse approfondie de Kimi K3, le plus grand modèle open-weight au monde avec 2,8 trillions de paramètres. Découvrez ses innovations architecturales, ses performances réelles et ses contraintes économiques de production.",
-
-      // Blog Article 4
-      "art4_title": "Le Grand Schisme de l'IA : Entre Guerre Hégémonique, Modèles \"Open-Weight\" Chinois et Crise des Guardrails",
-      "art4_summary": "Une analyse du grand schisme de l'IA à l'été 2026 : l'affrontement entre les Frontier Labs closed-source américains et les modèles open-weight chinois (Kimi K3, GLM-5.2), l'économie de l'inférence et la crise de sécurité des agents autonomes.",
-
-      // Blog Article 5
-      "art5_title": "Le Paradoxe des Software Factories : Pourquoi l'IA ne Remplacera Pas l'Ingénierie Système",
-      "art5_summary": "Une analyse des usines logicielles à agents autonomes, du Harness Engineering, du passage de la DX à l'AX (Agent Experience) et de la gestion de la dette technique agentique.",
 
       // i18n Translator Showcase Page
       "i18n_hero_badge": "AI Product Feature & Intégration LLM",
