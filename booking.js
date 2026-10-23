@@ -80,12 +80,12 @@ const MODE_CONFIGS = {
     submitHtml: '<span>Confirmer la réservation de Démo (15 min)</span>',
   },
   pilote: {
-    title: '1. Lancer votre Pilote Flash 48 h (490 € net)', subtitle: 'Déposez vos DPGF, BPU, DQE ou scans. Livraison sous 48h du fichier Excel structuré et du rapport d\'anomalies (100 % déduit de l\'Outil Métier).',
+    title: '1. Lancer votre Pilote Flash 48 h', subtitle: 'Déposez vos DPGF, BPU, DQE ou scans. Livraison sous 48h du fichier Excel structuré et du rapport d\'anomalies (100 % déduit de l\'Outil Métier).',
     showSlot: false, showDropzone: true, fileLabel: '5. Joindre vos dossiers DPGF, BPU, DQE ou scans (PDF, Excel ou Image, max 50 Mo) *', messageLabel: '6. Précisions sur votre dossier (Optionnel)',
     submitHtml: '<span>Transmettre les fichiers &amp; Lancer le Pilote 48h</span>',
   },
   deploy: {
-    title: '2. Mise en Production de Votre Outil Métier', subtitle: 'Déploiement de votre espace web privé dédié (2 990 € net — 50 % d\'acompte à la commande — Pilote 490 € déduit — 1 an de service inclus).',
+    title: '2. Mise en Production de Votre Outil Métier', subtitle: 'Déploiement de votre espace web privé dédié (50 % d\'acompte à la commande — Diagnostic déduit — 1 an de service inclus).',
     showSlot: false, showDropzone: true, fileLabel: '5. Joindre un cahier des charges, trame type ou scan (PDF, Excel ou Image, max 50 Mo)', messageLabel: '6. Précisions sur vos volumes ou vos besoins d\'intégration (Optionnel)',
     submitHtml: '<span>Échanger pour déployer l\'Outil Métier</span>',
   },

@@ -115,6 +115,7 @@
     try {
       let res = await fetch('./' + filePath).catch(() => null);
       if (!res || !res.ok) res = await fetch(filePath).catch(() => null);
+      if (!res || !res.ok) res = await fetch('/archives/book/' + filePath).catch(() => null);
       if (!res || !res.ok) res = await fetch('/book/' + filePath).catch(() => null);
       if (!res || !res.ok) throw new Error(`HTTP ${res ? res.status : 'Network Error'}`);
 

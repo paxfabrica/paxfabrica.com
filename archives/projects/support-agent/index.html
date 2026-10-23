@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="fr" class="light-theme" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support Agent — Customer Support Automation Agent | Production-Grade ReAct FSM, Statutory Rules &amp; MCP Runtime</title>
+  <meta name="description" content="Agent autonome de support client Tier-1 de niveau production. Boucle ReAct FSM (N_max=3), calcul déterministe des délais statutaires (14 jours), pare-feu anti-injection PII, outils typés MCP et audit trail structlog.">
+  <link rel="icon" href="../../../favicon.svg?v=2" type="image/svg+xml">
+  <link rel="icon" href="../../../favicon-32x32.png?v=2" type="image/png" sizes="32x32">
+  <link rel="icon" href="../../../favicon-16x16.png?v=2" type="image/png" sizes="16x16">
+  <link rel="shortcut icon" href="../../../favicon.ico?v=2">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../../apple-touch-icon.png?v=2">
+  <link rel="manifest" href="../../../site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../style.css?v=7.1">
+  <link rel="stylesheet" href="./style.css?v=1.0">
+  <script src="../../../theme.js?v=7.1"></script>
+  <script src="../../../lang.js?v=7.1"></script>
+</head>
+<body>
+  <div class="background-glow glow-1"></div>
+  <div class="background-glow glow-2"></div>
+
+  <!-- Header / Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <div class="nav-brand-group">
+        <a href="../../../tech.html" class="logo">
+          <span class="logo-icon">🤖</span>
+          <span class="logo-text">Support<span>.Agent</span></span>
+        </a>
+        <div class="nav-breadcrumb">
+          <a href="../../../tech.html" data-i18n="nav_hub">← Hub Portfolio</a>
+        </div>
+      </div>
+
+      <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        ☰
+      </button>
+
+      <div class="nav-links-wrapper">
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#presentation" data-i18n="nav_presentation">Présentation</a></li>
+            <li><a href="#architecture" data-i18n="nav_architecture">Architecture</a></li>
+            <li><a href="#benchmarks" data-i18n="support_nav_benchmarks">Benchmarks &amp; Qualité</a></li>
+            <li><a href="#demo" data-i18n="support_nav_demo">Simulateur &amp; Playground</a></li>
+            <li><a href="#docs-sources" data-i18n="nav_docs_sources">Documents &amp; Sources ↗</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-controls">
+          <button class="theme-toggle-btn" type="button" aria-label="Passer au mode sombre" title="Passer au mode sombre">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+          <button class="lang-switch-btn" type="button" aria-label="Switch language to English" title="Switch to English (EN)">
+            <span class="lang-icon">🇬🇧</span>
+            <span class="lang-text">EN</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="container hero-container">
+        <div class="badge">
+          <span class="badge-dot"></span>
+          <span data-i18n="support_hero_badge">Système Agentique Autonome Tier-1</span>
+        </div>
+        <h1 class="hero-title" data-i18n="support_hero_title">Agent de Support Client Autonome <span class="gradient-text">(ReAct FSM &amp; MCP Runtime)</span></h1>
+        <p class="hero-desc" data-i18n="support_hero_desc">
+          Système agentique de niveau production automatisant le support client de premier niveau. Boucle d'exécution ReAct FSM à plafond strict (N<sub>max</sub>=3), calcul déterministe des délais statutaires de rétractation (14 jours) et compensations de retard, confinement PII défensif contre les injections de prompt indirectes, outils MCP typés et persistance multi-tenant.
+        </p>
+
+        <div class="tech-stack-pills">
+          <span class="pill" data-i18n="support_pill1">Machine à États ReAct FSM (N ≤ 3)</span>
+          <span class="pill" data-i18n="support_pill2">Règles Statutaires Déterministes (14j)</span>
+          <span class="pill" data-i18n="support_pill3">Encapsulation XML Défensive &amp; PII</span>
+          <span class="pill" data-i18n="support_pill4">Runtime d'Outils MCP Protocol</span>
+          <span class="pill" data-i18n="support_pill5">Cache Idempotence SHA-256 (Redis)</span>
+          <span class="pill" data-i18n="support_pill6">FastAPI Asynchrone + Ingress CLI Rich</span>
+          <span class="pill" data-i18n="support_pill7">Audit Trail PostgreSQL &amp; Structlog</span>
+          <span class="pill" data-i18n="support_pill8">Docker Multi-Stage (&lt; 250 Mo)</span>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#demo" class="btn btn-primary btn-lg">
+            <span data-i18n="support_hero_btn_demo">Tester le Playground ReAct</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#architecture" class="btn btn-secondary btn-lg" data-i18n="support_hero_btn_arch">Découvrir l'Architecture</a>
+          <a href="https://github.com/mdaadoun/support_agent" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg" data-i18n="support_hero_btn_github">Code Source (GitHub) ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Presentation Section -->
+    <section class="section" id="presentation">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge" data-i18n="support_pres_badge">Garde-Fous &amp; Ingénierie Agentique</div>
+          <h2 class="section-title" data-i18n="support_pres_title">Les 6 Piliers de l'Automatisation Support Autonome</h2>
+          <p class="section-subtitle" data-i18n="support_pres_subtitle">Allier la flexibilité du raisonnement LLM à la rigueur absolue du droit et de la sécurité d'entreprise</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="glass-card feature-card">
+            <div class="card-icon">🔄</div>
+            <h3 data-i18n="support_card1_title">1. Boucle ReAct FSM avec Plafond Strict (N ≤ 3)</h3>
+            <p data-i18n="support_card1_desc">
+              Machine à états finis alternant Pensée (Thought), Action et Observation. Un plafond absolu de 3 itérations interdit tout emballement récursif ou boucle infinie, déclenchant une escalade humaine automatique en cas de doute.
+            </p>
+          </div>
+
+          <div class="glass-card feature-card">
+            <div class="card-icon">⚖️</div>
+            <h3 data-i18n="support_card2_title">2. Règles Métier Statutaires Déterministes</h3>
+            <p data-i18n="support_card2_desc">
+              Le calcul du délai de rétractation de 14 jours (Code de la consommation art. L221-18) et des compensations de retard express est opéré en Python pur. Aucun calcul juridique critique n'est délégué à l'approximation du LLM.
+            </p>
+          </div>
+
+          <div class="glass-card feature-card">
+            <div class="card-icon">🛡️</div>
+            <h3 data-i18n="support_card3_title">3. Encapsulation XML Défensive &amp; Isolation PII</h3>
+            <p data-i18n="support_card3_desc">
+              Tous les e-mails non fiables sont encapsulés dans des balises <code>&lt;user_email&gt;</code> neutralisant les attaques par injection de prompt indirecte. Les accès ERP sont vérifiés contre l'adresse e-mail authentifiée de l'expéditeur.
+            </p>
+          </div>
+
+          <div class="glass-card feature-card">
+            <div class="card-icon">🔌</div>
+            <h3 data-i18n="support_card4_title">4. Runtime d'Outils Découplé (Protocole MCP)</h3>
+            <p data-i18n="support_card4_desc">
+              Outils typés Pydantic V2 conformes au standard Model Context Protocol (MCP). Un bouclier d'exceptions étanche isole les pannes d'API externes pour maintenir la stabilité de la session.
+            </p>
+          </div>
+
+          <div class="glass-card feature-card">
+            <div class="card-icon">⚡</div>
+            <h3 data-i18n="support_card5_title">5. Cache d'Idempotence SHA-256 (Redis)</h3>
+            <p data-i18n="support_card5_desc">
+              Déduplication stricte des opérations critiques via une clé <code>SHA256(session:outil:arguments)</code> avec un TTL de 15 minutes, garantissant qu'aucun remboursement ou bon d'achat ne puisse être généré deux fois.
+            </p>
+          </div>
+
+          <div class="glass-card feature-card">
+            <div class="card-icon">💻</div>
+            <h3 data-i18n="support_card6_title">6. Double Ingress : API REST &amp; CLI Rich</h3>
+            <p data-i18n="support_card6_desc">
+              API FastAPI asynchrone pour l'intégration continue de webhooks e-mails et interface CLI interactive développée avec Typer et Rich pour l'administration et les diagnostics opérationnels.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section class="section" id="architecture">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge" data-i18n="support_arch_badge">Spécifications Système</div>
+          <h2 class="section-title" data-i18n="support_arch_title">Architecture en 4 Couches &amp; Isolation Hermétique</h2>
+          <p class="section-subtitle" data-i18n="support_arch_subtitle">Présentation ➔ Domaine &amp; Agent ➔ Infrastructure &amp; Outils ➔ Persistance &amp; Données</p>
+        </div>
+
+        <div class="glass-card arch-diagram-card">
+          <pre class="arch-flow-diagram">
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                           PRESENTATION LAYER                                │
+│       FastAPI REST Endpoints (/health • /agent/process • /sessions)         │
+│                 Typer &amp; Rich Interactive Terminal CLI                       │
+└──────────────────────────────────────┬──────────────────────────────────────┘
+                                       │ POST /agent/process
+                                       ▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                       CORE DOMAIN &amp; AGENT LAYER                             │
+│   Input Sanitizer (&lt;user_email&gt;) ──► Security Access Control (PII Guard)     │
+│                                              │                              │
+│   ReAct Controller (FSM N_max=3) ◄───────────┘                              │
+│         │                                                                   │
+│         ├──► Statutory Rules Engine (14-Day Cooling-off &amp; Delay Vouchers)   │
+│         └──► Multi-Provider Prompt Builder (T=0.0 Deterministic)            │
+└───────────────────┬─────────────────────────────────────┬───────────────────┘
+                    │ Tool Invocations                    │ State &amp; Cache
+                    ▼                                     ▼
+┌──────────────────────────────────────┐  ┌───────────────────────────────────┐
+│        INFRASTRUCTURE LAYER          │  │        PERSISTENCE LAYER          │
+│  • MCP Tool Interface &amp; Registry     │  │  • Redis Idempotency Cache        │
+│  • ERP Mock Client &amp; Tenacity Retry  │  │    (SHA256 with 15-min TTL)       │
+│  • OpenAI / Claude / Gemini Clients  │  │  • Redis / In-Memory Session Store │
+│  • Structlog JSON &amp; FinOps Telemetry │  │  • PostgreSQL / JSONL Audit Trail │
+└──────────────────────────────────────┘  └───────────────────────────────────┘
+          </pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benchmarks & Quality Verification Section -->
+    <section class="section" id="benchmarks">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge badge-accent" data-i18n="support_bench_badge">Validation &amp; Certification</div>
+          <h2 class="section-title" data-i18n="support_bench_title">Objectifs Qualité d'Entreprise &amp; Conformité</h2>
+          <p class="section-subtitle" data-i18n="support_bench_subtitle">Validation statique stricte, tolérance zéro aux boucles infinies et étanchéité de prompt testée</p>
+        </div>
+
+        <div class="benchmarks-grid">
+          <div class="benchmark-card">
+            <span class="benchmark-card-title" data-i18n="support_bench_metric1_title">Typage Mypy Strict</span>
+            <span class="benchmark-card-val">100% PASS</span>
+            <span class="benchmark-card-target">109 fichiers analysés (0 erreur) · <span class="status-badge-pass">✅ PASS</span></span>
+          </div>
+          <div class="benchmark-card">
+            <span class="benchmark-card-title" data-i18n="support_bench_metric2_title">Couverture de Tests</span>
+            <span class="benchmark-card-val">&gt; 82.5%</span>
+            <span class="benchmark-card-target">Cible : ≥ 80% (Pytest) · <span class="status-badge-pass">✅ PASS</span></span>
+          </div>
+          <div class="benchmark-card">
+            <span class="benchmark-card-title" data-i18n="support_bench_metric3_title">Plafond Récursion FSM</span>
+            <span class="benchmark-card-val">N ≤ 3</span>
+            <span class="benchmark-card-target">0 boucle infinie (Escalade automatique) · <span class="status-badge-pass">✅ PASS</span></span>
+          </div>
+          <div class="benchmark-card">
+            <span class="benchmark-card-title" data-i18n="support_bench_metric4_title">Défense Prompt Injection</span>
+            <span class="benchmark-card-val">100.00%</span>
+            <span class="benchmark-card-target">Toutes tentatives bloquées · <span class="status-badge-pass">✅ PASS</span></span>
+          </div>
+          <div class="benchmark-card">
+            <span class="benchmark-card-title" data-i18n="support_bench_metric5_title">Latence Métier p95</span>
+            <span class="benchmark-card-val">&lt; 450 ms</span>
+            <span class="benchmark-card-target">Hors latence réseau LLM · <span class="status-badge-pass">✅ PASS</span></span>
+          </div>
+          <div class="benchmark-card">
+            <span class="benchmark-card-title" data-i18n="support_bench_metric6_title">Empreinte Conteneur</span>
+            <span class="benchmark-card-val">&lt; 250 Mo</span>
+            <span class="benchmark-card-target">Docker non-root (UID 10001) · <span class="status-badge-pass">✅ PASS</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Live Demo & ReAct Playground -->
+    <section class="section" id="demo">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge badge-accent" data-i18n="support_demo_badge">Playground Interactif</div>
+          <h2 class="section-title" data-i18n="support_demo_title">Simulateur Agent ReAct &amp; Support Automatisé</h2>
+          <p class="section-subtitle" data-i18n="support_demo_subtitle">Sélectionnez un scénario d'e-mail client pour observer la boucle de raisonnement, les appels d'outils ERP et les garde-fous</p>
+        </div>
+
+        <div class="glass-card" style="margin-bottom: 20px; border-left: 4px solid var(--primary-color);">
+          <div style="font-weight: 700; font-size: 0.95rem; margin-bottom: 4px;" data-i18n="mock_disclaimer_support_title">
+            Environnement de Démonstration (Simulateur Mock Côté Client) :
+          </div>
+          <div style="font-size: 0.88rem; color: var(--text-muted);" data-i18n="mock_disclaimer_support_desc">
+            Ce démonstrateur est une <strong>simulation côté client du moteur ReAct FSM</strong>. Il met en scène l'encapsulation XML défensive, les règles statutaires de rétractation (14 jours) et la détection d'attaques d'évasion. <strong>Aucune clé API externe n'est exposée sur ce site statique.</strong>
+          </div>
+        </div>
+
+        <!-- Scenarios Bar -->
+        <div class="preset-pills-row" style="margin-bottom: 18px;">
+          <button class="preset-pill-btn active" data-scenario="return_ok">📦 Rétractation sous 14 jours (Éligible)</button>
+          <button class="preset-pill-btn" data-scenario="return_expired">⚠️ Rétractation Hors-Délai (>14 jours)</button>
+          <button class="preset-pill-btn" data-scenario="delay_voucher">🎟️ Retard Livraison Express (>48h)</button>
+          <button class="preset-pill-btn" data-scenario="injection_attack">🚨 Tentative d'Injection de Prompt</button>
+        </div>
+
+        <div class="agent-playground-grid">
+          <!-- Left: E-mail Payload & Live ReAct Trace -->
+          <div class="glass-card agent-card">
+            <h3 style="font-size: 1.1rem; font-weight: 700;" data-i18n="support_email_card_title">✉️ E-mail Client Entrant</h3>
+
+            <div class="agent-email-box">
+              <div class="email-meta-row">
+                <div class="email-meta-item">De : <strong id="agentSenderEmail">alice.martin@example.fr</strong></div>
+                <div class="email-meta-item">Commande : <strong id="agentOrderId">CMD-10001</strong></div>
+                <div class="email-meta-item">Objet : <strong id="agentSubject">Demande de rétractation</strong></div>
+              </div>
+              <textarea id="agentBodyInput" class="email-body-input" readonly></textarea>
+            </div>
+
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                <span style="font-size: 0.82rem; font-weight: 600; color: var(--text-muted);">Garde-Fou Sécurité : Encapsulation XML défensive</span>
+                <span class="status-badge-pass" style="font-size: 0.75rem;">Filtre Anti-Jailbreak</span>
+              </div>
+              <div id="sanitizerPreview" class="sanitizer-preview-box"></div>
+            </div>
+
+            <div>
+              <button id="btnRunAgent" class="btn btn-primary" type="button" style="width: 100%;">
+                <span data-i18n="support_btn_execute">Ré-exécuter le cycle ReAct ↵</span>
+              </button>
+            </div>
+
+            <div style="margin-top: 10px;">
+              <h4 style="font-size: 0.92rem; font-weight: 700; color: var(--text-muted); margin-bottom: 12px;">Trace d'Exécution ReAct (Pensée ➔ Action ➔ Observation) :</h4>
+              <div id="reactTraceContainer" class="react-trace-container"></div>
+            </div>
+          </div>
+
+          <!-- Right: Final Answer & Telemetry -->
+          <div class="glass-card agent-card">
+            <div class="final-answer-card">
+              <div class="final-answer-header">
+                <span>🤖 Réponse Structurée Générée</span>
+                <span style="font-size: 0.75rem; background: rgba(99, 102, 241, 0.2); border-radius: 4px; padding: 2px 6px;">Format E-mail Client</span>
+              </div>
+              <div id="finalAnswerText" class="final-answer-text"></div>
+            </div>
+
+            <div>
+              <h4 style="font-size: 0.92rem; font-weight: 700; color: var(--text-muted); margin-bottom: 12px;">Télémétrie de Session &amp; Décision Métier :</h4>
+              <div class="agent-metrics-row">
+                <div class="agent-metric-item">
+                  <div class="agent-metric-label">Règle Statutaire</div>
+                  <div id="metricRule" class="agent-metric-val" style="font-size: 0.78rem;">Art. L221-18</div>
+                </div>
+                <div class="agent-metric-item">
+                  <div class="agent-metric-label">Étapes FSM</div>
+                  <div id="metricFsm" class="agent-metric-val">2 / 3</div>
+                </div>
+                <div class="agent-metric-item">
+                  <div class="agent-metric-label">Latence</div>
+                  <div id="metricLatency" class="agent-metric-val">420 ms</div>
+                </div>
+                <div class="agent-metric-item">
+                  <div class="agent-metric-label">Coût FinOps</div>
+                  <div id="metricCost" class="agent-metric-val">$0.00016</div>
+                </div>
+              </div>
+              <div style="margin-top: 12px; background: rgba(0, 0, 0, 0.25); border: 1px solid var(--border-color, rgba(255, 255, 255, 0.08)); border-radius: 6px; padding: 10px 14px; display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 0.82rem; color: var(--text-muted);">Audit &amp; Intégrité :</span>
+                <span id="metricSecurity" style="font-size: 0.82rem; font-weight: 700; color: #34d399;">🛡️ Conforme</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Docs and Sources Section -->
+    <section class="section" id="docs-sources">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge badge-accent" data-i18n="support_docs_badge">Ressources &amp; Spécifications</div>
+          <h2 class="section-title" data-i18n="support_docs_title">Spécifications &amp; Documentation Technique</h2>
+          <p class="section-subtitle" data-i18n="support_docs_subtitle">Explorez les spécifications formelles, le schéma d'architecture et les manifestes Docker</p>
+        </div>
+
+        <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
+          <div class="glass-card feature-card">
+            <div class="card-icon">📋</div>
+            <h3 data-i18n="support_res1_title">Spécifications Formelles</h3>
+            <p data-i18n="support_res1_desc">Définition complète des contrats d'API, schémas Pydantic V2 et cas limites métier.</p>
+            <a href="https://github.com/mdaadoun/support_agent/blob/main/docs/specifications.md" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-full" style="margin-top: 12px;" data-i18n="support_res1_btn">Voir specifications.md ↗</a>
+          </div>
+
+          <div class="glass-card feature-card">
+            <div class="card-icon">🏗️</div>
+            <h3 data-i18n="support_res2_title">Architecture Système</h3>
+            <p data-i18n="support_res2_desc">Modèle en 4 couches hermétiques, machine à états ReAct et interface MCP.</p>
+            <a href="https://github.com/mdaadoun/support_agent/blob/main/docs/architecture.md" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-full" style="margin-top: 12px;" data-i18n="support_res2_btn">Voir architecture.md ↗</a>
+          </div>
+
+          <div class="glass-card feature-card">
+            <div class="card-icon">🐳</div>
+            <h3 data-i18n="support_res3_title">Packaging &amp; Docker</h3>
+            <p data-i18n="support_res3_desc">Stack complète API + Redis 7 + PostgreSQL 15 orchestrée pour la production.</p>
+            <a href="https://github.com/mdaadoun/support_agent/blob/main/docker/docker-compose.yml" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-full" style="margin-top: 12px;" data-i18n="support_res3_btn">Voir docker-compose.yml ↗</a>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+          <a href="https://github.com/mdaadoun/support_agent" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg" data-i18n="support_full_repo_btn">
+            <span>Explorer le Dépôt GitHub Complet</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-info">
+        <p data-i18n="footer_support_text">Support Agent — Autonomous Customer Support Engine by Pax Fabrica</p>
+        <p class="footer-sub">
+          <span>Hébergé via GitHub Pages &amp; Scaleway (France)</span> · 
+          <a href="../../../legal.html#mentions" style="color: var(--text-muted); text-decoration: underline;">Mentions Légales</a> · 
+          <a href="../../../legal.html#cgv" style="color: var(--text-muted); text-decoration: underline;">CGV / CGP</a> · 
+          <a href="../../../legal.html#confidentialite" style="color: var(--text-muted); text-decoration: underline;">Confidentialité &amp; RGPD</a>
+        </p>
+      </div>
+      <div class="footer-controls">
+        <span class="footer-theme-label">🎨 Thème :</span>
+        <button class="theme-toggle-btn footer-theme-toggle" type="button" aria-label="Passer au mode sombre" title="Passer au mode sombre">
+          <span class="theme-toggle-icon">🌙</span>
+          <span class="theme-toggle-text">Sombre</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
