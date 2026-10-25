@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="fr" class="light-theme" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pax.Fabrica — Vos DPGF PDF et Scans. Notre IA. Votre Excel prêt à travailler.</title>
+  <meta name="description" content="Pax.Extract transforme vos DPGF, BPU et DQE PDF et Scans en Excel structuré, signale les données à vérifier et conserve la traçabilité vers la source. Testez-le sur vos vrais dossiers.">
+  <meta name="version" content="1.1.1">
+  <meta name="asset-version" content="7.5">
+  <meta name="git-commit" content="5ad9151">
+  <link rel="icon" href="./favicon.svg?v=2" type="image/svg+xml">
+  <link rel="icon" href="./favicon-32x32.png?v=2" type="image/png" sizes="32x32">
+  <link rel="icon" href="./favicon-16x16.png?v=2" type="image/png" sizes="16x16">
+  <link rel="shortcut icon" href="./favicon.ico?v=2">
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png?v=2">
+  <link rel="manifest" href="./site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@600;700;800&family=Outfit:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css?v=7.5">
+  <script src="./theme.js?v=7.5"></script>
+  <script type="module" src="./booking.js?v=7.5"></script>
+  <script type="module" src="./proof-lightbox.js?v=1.0"></script>
+</head>
+<body>
+  <div class="background-glow glow-1"></div>
+  <div class="background-glow glow-2"></div>
+
+  <!-- Top Preview Banner to Future Version -->
+  <aside class="preview-alert-banner" aria-label="Bannière d'aperçu de la future version">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <span style="font-size: 1.2rem;">✨</span>
+      <span><strong>Aperçu Pax Fabrica 2.0</strong> : Découvrez la version future avec les 5 piliers complets et l'offre d'études de prix BTP.</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <a href="./future.html" class="preview-alert-link">
+        <span>Voir la version future (5 piliers) →</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Header / Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <div class="nav-brand-group">
+        <a href="#" class="logo">
+          <img src="./favicon.svg" alt="Pax Fabrica" class="logo-favicon">
+          <span class="logo-text">Pax<span>.Fabrica</span></span>
+        </a>
+      </div>
+
+      <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        ☰
+      </button>
+
+      <div class="nav-links-wrapper">
+        <nav style="flex: 1; display: flex; justify-content: center;">
+          <ul class="nav-links">
+            <li><a href="#solutions">Produit</a></li>
+            <li><a href="#offres">Offre</a></li>
+            <li><a href="#roi">ROI</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#rdv" class="nav-btn-cta">Tester votre DPGF — Diagnostic</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-controls">
+          <button class="theme-toggle-btn" type="button" aria-label="Passer au mode sombre" title="Passer au mode sombre">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="hero-container">
+        <!-- Hero Brand Header -->
+        <div class="hero-brand-card">
+          <img src="./favicon.svg" alt="Pax Fabrica Emblem" class="hero-brand-icon">
+          <div class="hero-brand-title">Pax<span>.Fabrica</span></div>
+          <div class="hero-brand-divider"></div>
+          <div class="hero-brand-subtitle">IA documentaire pour le BTP</div>
+        </div>
+
+        <h1 class="hero-title">
+          Vos DPGF PDF et Scans.<br><span class="gradient-text">Notre IA. Votre Excel prêt à travailler.</span>
+        </h1>
+        <p class="hero-desc">
+          <span class="pax-wordmark">Pax<span class="pax-suffix-extract">.Extract</span></span> extrait les lignes, quantités, unités et montants de vos DPGF, BPU, DQE, détecte les anomalies, crée un Excel exploitable dans votre flux de travail existant et vous permet de retrouver chaque donnée dans son document source.
+        </p>
+        <div class="hero-actions">
+          <a href="#rdv" class="btn btn-primary btn-lg">
+            <span>Tester votre DPGF — Diagnostic Pilote</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#solutions" class="btn btn-secondary btn-lg">Voir comment ça fonctionne</a>
+        </div>
+        <div class="hero-reassurance-badge">
+          <span class="reassurance-icon">📦</span>
+          <p class="hero-subdesc">
+            <strong>Vous avez un DPGF sous la main ? Commencez avec celui-là.</strong> 1–3 dossiers · 500 pages max · premier livrable sous 48 h ouvrées · diagnostic 100 % déduit de la mise en production de votre outil métier.
+          </p>
+        </div>
+        <div class="tech-stack-pills">
+          <span class="pill">⚡ PDF → Excel structuré</span>
+          <span class="pill">🔎 Anomalies signalées &amp; sources traçables</span>
+          <span class="pill">🔒 Données sous contrôle</span>
+          <span class="pill">⏱️ 1–3 dossiers · 500 pages · 48 h</span>
+          <span class="pill">☁️ Zéro installation · zéro clé API</span>
+        </div>
+      </div>
+    </section>
+
+      <!-- 4 Business Pillars Section -->
+      <section class="section" id="solutions">
+        <div class="container">
+          <div class="section-header">
+            <div class="badge"><span class="pax-wordmark">Pax<span class="pax-suffix-extract">.Extract</span></span></div>
+            <h2 class="section-title">Ce que <span class="pax-wordmark">Pax<span class="pax-suffix-extract">.Extract</span></span> fait à votre place</h2>
+            <p class="section-subtitle">Extraire, signaler, retrouver et contrôler — sans remplacer votre expertise métier.</p>
+          </div>
+
+          <div class="features-grid">
+            <!-- Pillar 1 -->
+            <div class="glass-card feature-card feature-card-1">
+              <div class="feature-card-header">
+                <div class="feature-num-badge">
+                  <span class="feature-num">01.</span>
+                  <span class="feature-badge-title">Extraire</span>
+                </div>
+                <span class="feature-icon-subtle" aria-hidden="true">⚡</span>
+              </div>
+              <p class="feature-card-desc">
+                Vos DPGF, BPU et DQE PDF et Scans deviennent des fichiers Excel structurés, sans ressaisie ligne par ligne.
+              </p>
+            </div>
+
+            <!-- Pillar 2 -->
+            <div class="glass-card feature-card feature-card-2">
+              <div class="feature-card-header">
+                <div class="feature-num-badge">
+                  <span class="feature-num">02.</span>
+                  <span class="feature-badge-title">Repérer</span>
+                </div>
+                <span class="feature-icon-subtle" aria-hidden="true">🔎</span>
+              </div>
+              <p class="feature-card-desc">
+                Les prix absents, unités ambiguës, incohérences et données douteuses sont signalés pour vérification.
+              </p>
+            </div>
+
+            <!-- Pillar 3 -->
+            <div class="glass-card feature-card feature-card-3">
+              <div class="feature-card-header">
+                <div class="feature-num-badge">
+                  <span class="feature-num">03.</span>
+                  <span class="feature-badge-title">Retrouver</span>
+                </div>
+                <span class="feature-icon-subtle" aria-hidden="true">📍</span>
+              </div>
+              <p class="feature-card-desc">
+                Chaque donnée extraite est accompagnée de sa source lorsqu’elle est disponible et identifiable, pour vous permettre de vérifier le document original.
+              </p>
+            </div>
+
+            <!-- Pillar 4 -->
+            <div class="glass-card feature-card feature-card-4">
+              <div class="feature-card-header">
+                <div class="feature-num-badge">
+                  <span class="feature-num">04.</span>
+                  <span class="feature-badge-title">Contrôler</span>
+                </div>
+                <span class="feature-icon-subtle" aria-hidden="true">🔒</span>
+              </div>
+              <p class="feature-card-desc">
+                L’IA prépare le travail. L’économiste garde la décision. <span class="pax-wordmark">Pax<span class="pax-suffix-extract">.Extract</span></span> signale les points à vérifier au lieu de décider à votre place.
+              </p>
+            </div>
+          </div>
+
+          <!-- Compact Scope / Trust (Il fait / Il ne fait pas) -->
+          <div class="scope-compact-grid">
+            <div class="scope-compact-card does-card">
+              <div class="scope-compact-icon">✓</div>
+              <div class="scope-compact-content">
+                <h4>Il fait</h4>
+                <p>Lire, structurer, signaler, tracer et préparer vos données documentaires.</p>
+              </div>
+            </div>
+            <div class="scope-compact-card does-not-card">
+              <div class="scope-compact-icon">×</div>
+              <div class="scope-compact-content">
+                <h4>Il ne fait pas</h4>
+                <p>Décider à votre place, réaliser des métrés complexes ou remplacer votre logiciel de chiffrage.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>  
+    <!-- Visual Proof Section -->
+    <section class="section proof-section" id="preuve">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge badge-accent">LA PREUVE EN UN COUP D’ŒIL</div>
+          <h2 class="section-title">Votre PDF entre. Un Excel exploitable sort.</h2>
+          <p class="section-subtitle"><span class="pax-wordmark">Pax<span class="pax-suffix-extract">.Extract</span></span> transforme le document brut en donnée structurée, détecte les anomalies et vous permet de retrouver chaque donnée dans son document source.</p>
+        </div>
+
+        <!-- Interactive Step Progress Bar -->
+        <div class="proof-stepper-track" aria-label="Progression du document de l'entrée PDF à l'Excel final">
+          <div class="proof-step-nav active" data-step-target="0" role="button" tabindex="0" title="Étape 1 : Document Source (PDF)">
+            <span class="proof-step-dot">1</span>
+            <span class="proof-step-name">01. PDF Source</span>
+          </div>
+          <div class="proof-step-line"></div>
+          <div class="proof-step-nav" data-step-target="1" role="button" tabindex="0" title="Étape 2 : Pipeline & Extraction IA">
+            <span class="proof-step-dot">2</span>
+            <span class="proof-step-name">02. Extraction &amp; IA</span>
+          </div>
+          <div class="proof-step-line"></div>
+          <div class="proof-step-nav" data-step-target="2" role="button" tabindex="0" title="Étape 3 : Audit & Contrôles Métier">
+            <span class="proof-step-dot">3</span>
+            <span class="proof-step-name">03. Audit &amp; Contrôles</span>
+          </div>
+          <div class="proof-step-line"></div>
+          <div class="proof-step-nav" data-step-target="3" role="button" tabindex="0" title="Étape 4 : Restitution Excel Exploitable">
+            <span class="proof-step-dot">4</span>
+            <span class="proof-step-name">04. Excel Sortant</span>
+          </div>
+        </div>
+
+        <!-- 4-Step Progression Grid -->
+        <div class="proof-flow">
+          <!-- Step 1 -->
+          <div class="glass-card proof-card" data-proof-index="0" role="button" tabindex="0" aria-label="Agrandir l'étape 1 : Document source PDF">
+            <div>
+              <div class="proof-card-top">
+                <div class="proof-label">01 · SOURCE</div>
+                <span class="proof-step-pill">Entrée brute</span>
+              </div>
+              <h3 class="proof-card-title">Document Source (PDF)</h3>
+              <div class="proof-thumb-wrapper">
+                <img src="./img/1_pdf.png" alt="DPGF source multi-lots en format PDF" class="proof-thumb-img" loading="lazy">
+                <div class="proof-zoom-overlay">
+                  <span class="proof-zoom-btn" title="Agrandir">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                  </span>
+                </div>
+              </div>
+              <p class="proof-card-desc">DPGF ou BPU multi-lots complexe scanné/vectoriel. Les données sont extraites et structurées à partir du document source. Les éléments incertains sont signalés pour vérification.</p>
+            </div>
+            <div class="proof-tags">
+              <span class="proof-tag">PDF / Scans</span>
+              <span class="proof-tag">Multi-lots</span>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="glass-card proof-card" data-proof-index="1" role="button" tabindex="0" aria-label="Agrandir l'étape 2 : Pipeline et extraction IA">
+            <div>
+              <div class="proof-card-top">
+                <div class="proof-label">02 · TRAITEMENT</div>
+                <span class="proof-step-pill">Temps réel</span>
+              </div>
+              <h3 class="proof-card-title">Pipeline &amp; Extraction IA</h3>
+              <div class="proof-thumb-wrapper">
+                <img src="./img/2_extract.png" alt="Interface de traitement Pax.Extract et progression OCR + LLM" class="proof-thumb-img" loading="lazy">
+                <div class="proof-zoom-overlay">
+                  <span class="proof-zoom-btn" title="Agrandir">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                  </span>
+                </div>
+              </div>
+              <p class="proof-card-desc">Numérisation OCR haute précision et extraction sémantique LLM bloc par bloc avec suivi de progression lot par lot en direct.</p>
+            </div>
+            <div class="proof-tags">
+              <span class="proof-tag">OCR + LLM</span>
+              <span class="proof-tag">Suivi direct</span>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="glass-card proof-card" data-proof-index="2" role="button" tabindex="0" aria-label="Agrandir l'étape 3 : Contrôles métier et détection d'anomalies">
+            <div>
+              <div class="proof-card-top">
+                <div class="proof-label">03 · CONTRÔLE</div>
+                <span class="proof-step-pill">Audit Qualité</span>
+              </div>
+              <h3 class="proof-card-title">Audit &amp; Détection d'Anomalies</h3>
+              <div class="proof-thumb-wrapper">
+                <img src="./img/3_rapport.png" alt="Rapport de contrôle qualité et détection des anomalies de calcul" class="proof-thumb-img" loading="lazy">
+                <div class="proof-zoom-overlay">
+                  <span class="proof-zoom-btn" title="Agrandir">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                  </span>
+                </div>
+              </div>
+              <p class="proof-card-desc">Contrôle arithmétique automatique (PU × Quantité), détection des points de vigilance et pointage direct de la page source.</p>
+            </div>
+            <div class="proof-tags">
+              <span class="proof-tag">Rapport</span>
+              <span class="proof-tag">Contrôle calculs</span>
+              <span class="proof-tag">Traçabilité page</span>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="glass-card proof-card" data-proof-index="3" role="button" tabindex="0" aria-label="Agrandir l'étape 4 : Restitution Excel exploitable">
+            <div>
+              <div class="proof-card-top">
+                <div class="proof-label">04 · RESTITUTION</div>
+                <span class="proof-step-pill">Livrable final</span>
+              </div>
+              <h3 class="proof-card-title">Excel Exploitable &amp; Structuré</h3>
+              <div class="proof-thumb-wrapper">
+                <img src="./img/4_excel.png" alt="Classeur Excel final structuré avec surlignage des anomalies" class="proof-thumb-img" loading="lazy">
+                <div class="proof-zoom-overlay">
+                  <span class="proof-zoom-btn" title="Agrandir">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                  </span>
+                </div>
+              </div>
+              <p class="proof-card-desc">Classeur .xlsx prêt pour le chiffrage : lignes normalisées, statuts de contrôle (« ok », « a_valider ») et surlignage couleur.</p>
+            </div>
+            <div class="proof-tags">
+              <span class="proof-tag">Format .xlsx</span>
+              <span class="proof-tag">Prêt à chiffrer</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="proof-caption">
+          <strong>L’IA prépare le travail.</strong> Vous gardez la décision.
+        </div>
+        <p class="case-disclaimer" style="text-align: center; margin-top: 14px; font-size: 0.85rem; color: var(--text-muted); opacity: 0.85;">
+          Captures réelles du moteur <span class="pax-wordmark">Pax<span class="pax-suffix-extract">.Extract</span></span>. Les performances réelles sont mesurées sur vos propres dossiers pendant le pilote.
+        </p>
+      </div>
+
+      <!-- Fluid Zoom Lightbox Modal -->
+      <div id="proofLightbox" class="proof-lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="proofLightboxTitle">
+        <div class="proof-lightbox-backdrop" id="proofLightboxBackdrop"></div>
+        <div class="proof-lightbox-dialog">
+          <div class="proof-lightbox-header">
+            <div class="proof-lightbox-title-group">
+              <span class="proof-lightbox-step" id="proofLightboxStep">Étape 01 / 04</span>
+              <h3 class="proof-lightbox-title" id="proofLightboxTitle">01 · Document source (PDF)</h3>
+            </div>
+            <div class="proof-lightbox-actions">
+              <button type="button" class="proof-lightbox-nav proof-prev" id="proofLightboxPrev" aria-label="Étape précédente">‹</button>
+              <button type="button" class="proof-lightbox-nav proof-next" id="proofLightboxNext" aria-label="Étape suivante">›</button>
+              <button type="button" class="proof-lightbox-close" id="proofLightboxClose" aria-label="Fermer la fenêtre">✕</button>
+            </div>
+          </div>
+          <div class="proof-lightbox-body">
+            <img id="proofLightboxImg" class="proof-lightbox-img" src="./img/1_pdf.png" alt="Capture d'écran de l'étape">
+          </div>
+          <div class="proof-lightbox-footer">
+            <p class="proof-lightbox-desc" id="proofLightboxDesc"></p>
+            <div class="proof-lightbox-dots" id="proofLightboxDots"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Simple Process -->
+    <section class="section process-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge">COMMENT ÇA MARCHE</div>
+          <h2 class="section-title">Commencez avec un seul dossier.</h2>
+          <p class="section-subtitle">Vous n’avez pas besoin de préparer un projet spécial pour tester <span class="pax-wordmark">Pax<span class="pax-suffix-extract">.Extract</span></span>.</p>
+        </div>
+        <div class="process-grid">
+          <div class="glass-card process-card"><span>01</span><h3>Envoyez</h3><p>Votre premier DPGF, BPU ou DQE réel (*).</p></div>
+          <div class="glass-card process-card"><span>02</span><h3>Nous traitons</h3><p>Extraction, structuration, anomalies et traçabilité.</p></div>
+          <div class="glass-card process-card"><span>03</span><h3>Vous vérifiez</h3><p>Premier livrable sous 48 h ouvrées.</p></div>
+          <div class="glass-card process-card"><span>04</span><h3>Vous décidez</h3><p>Jusqu’à 3 dossiers au total pendant 30 jours.</p></div>
+        </div>
+        <div style="text-align: center; margin-top: 18px; font-size: 0.85rem; color: var(--text-muted); opacity: 0.9;">
+          <span>(*) Si vous le souhaitez, vous pouvez également joindre la trame Excel dont vous avez l'habitude. (Une trame standard est fournie sinon).</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Complete Turnkey Customer Journey Section -->
+    <section class="section" id="offres">
+      <div id="rdv" style="position: relative; top: -80px; visibility: hidden;"></div>
+      <div class="container">
+        <div class="section-header">
+          <div class="badge badge-accent">Commencez par vos vrais dossiers</div>
+          <h2 class="section-title">Une preuve réelle avant de passer en production</h2>
+          <p class="section-subtitle" style="max-width: 960px;">Commencez avec un dossier. Mesurez le résultat. Testez jusqu’à 3 dossiers. Puis décidez.</p>
+        </div>
+
+        <div class="journey-tiered-layout">
+          <!-- Row 1: Step 0 (Démo Directe Visio 15 min - Hidden) -->
+          <div class="glass-card journey-card journey-card-horizontal journey-card-0" style="display: none;">
+            <div class="journey-card-left">
+              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px; flex-wrap: wrap;">
+                <div class="project-header-top" style="margin-bottom: 0;">
+                  <span class="project-header-icon" style="font-size: 1.15rem;">🖥️</span>
+                  <h3 class="project-card-title" style="font-size: 1.15rem;">0. Démo directe — 15 min</h3>
+                </div>
+                <span class="pill" style="background: rgba(99, 102, 241, 0.12); color: var(--primary-color); border-color: rgba(99, 102, 241, 0.35); font-size: 0.72rem; padding: 2px 8px;">DÉCOUVERTE</span>
+                <span class="pill" style="font-size: 0.72rem; padding: 2px 8px;">Gratuit</span>
+                <span class="pill" style="font-size: 0.72rem; padding: 2px 8px;">Sans engagement</span>
+                <span class="pill" style="font-size: 0.72rem; padding: 2px 8px;">15 min</span>
+                <span class="pill" style="font-size: 0.72rem; padding: 2px 8px;">Visio 1:1</span>
+              </div>
+              <div class="journey-desc-list" style="gap: 4px; font-size: 0.88rem; margin-bottom: 0;">
+                <div>Découvrez le fonctionnement sur un DPGF type et posez vos questions métier.</div>
+                <div><strong>Bénéfice :</strong> vérifiez par vous-même si <span class="pax-wordmark">Pax<span class="pax-suffix-extract">.Extract</span></span> mérite un test sur vos propres dossiers.</div>
+              </div>
+            </div>
+            <div class="journey-card-right" style="min-width: auto; align-self: center; margin: 0; padding: 0;">
+              <div class="project-card-action" style="margin-top: 0; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: flex-end;">
+                <a href="#preuve" class="btn btn-secondary" id="btnWatchDemoVideo" style="cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 9px 16px; font-size: 0.9rem; margin: 0; text-decoration: none;">
+                  <span>🎬 Voir vidéo démo</span>
+                </a>
+                <button type="button" class="btn btn-secondary" id="btnSelectModeDemo" style="cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 9px 16px; font-size: 0.9rem; margin: 0;">
+                  <span>📅 Réserver une Démo (15 min)</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 9l-7 7-7-7"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 2: Core Offers 1 & 2 (2 Columns Visual Prominence) -->
+          <div class="journey-core-grid">
+            <!-- Step 1 (Pilote Flash 48h) -->
+            <div class="glass-card journey-card journey-card-1">
+              <div>
+                <div class="project-header-top" style="justify-content: center; text-align: center; gap: 10px;">
+                  <span class="project-header-icon" style="font-size: 1.8rem;">⏱️</span>
+                  <h3 class="project-card-title" style="font-size: 1.25rem;">1. <span style="color: #10b981;">Pilote Flash</span> — Diagnostic sur vos dossiers</h3>
+                </div>
+                <div style="margin: 16px 0 22px 0; display: flex; justify-content: center;">
+                  <span class="pill" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border-color: rgba(16, 185, 129, 0.4);">TEST SUR VOS DOSSIERS</span>
+                </div>
+                <div class="journey-desc-list">
+                  <div><strong>Principe :</strong> Envoyez votre premier dossier réel. Vous pouvez ensuite tester jusqu’à 3 dossiers au total, dans la limite de 500 pages et pendant 30 jours.</div>
+                  <div><strong>Livrables :</strong> Excel structuré + anomalies signalées + traçabilité vers le document source + restitution vidéo.</div>
+                  <div><em>Le montant du pilote est intégralement déduit de la mise en production de votre outil métier.</em></div>
+                </div>
+              </div>
+              <div style="margin-top: 24px;">
+                <div class="project-card-tags">
+                  <span class="pill">Tarif sur devis</span>
+                  <span class="pill">Premier livrable 48h</span>
+                  <span class="pill">100 % déduit de l'Outil Métier</span>
+                </div>
+                <div class="project-card-action">
+                  <button type="button" class="btn btn-green btn-full btn-lg" id="btnSelectModePilote" style="cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
+                    <span>📤 Lancer votre diagnostic pilote</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 9l-7 7-7-7"/></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2 (Pax.Extract Hébergé) -->
+            <div class="glass-card journey-card journey-card-2">
+              <div>
+                <div class="project-header-top" style="justify-content: center; text-align: center; gap: 12px;">
+                  <svg viewBox="0 0 32 32" width="38" height="38" class="pax-temple-icon" aria-hidden="true">
+                    <path d="M16 3 L3 10 L29 10 Z" fill="currentColor"/>
+                    <circle cx="16" cy="7.5" r="1.3" fill="var(--bg-primary, #ffffff)"/>
+                    <rect x="4" y="11" width="24" height="1.8" fill="currentColor" rx="0.5"/>
+                    <rect x="5.5" y="14" width="2.8" height="10" fill="#e67e22" rx="0.6"/>
+                    <rect x="10.25" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/>
+                    <rect x="15" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/>
+                    <rect x="19.75" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/>
+                    <rect x="24.5" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/>
+                    <rect x="4" y="25" width="24" height="1.8" fill="currentColor" rx="0.5"/>
+                    <rect x="2" y="27.5" width="28" height="2" fill="currentColor" rx="0.5"/>
+                  </svg>
+                  <h3 class="project-card-title" style="font-size: 1.25rem;">2. <span class="pax-wordmark">Pax<span class="pax-suffix-extract">.Extract</span></span> — Mise en production</h3>
+                </div>
+                <div style="margin: 16px 0 22px 0; display: flex; justify-content: center;">
+                  <span class="pill" style="background: rgba(230, 126, 34, 0.15); color: #e67e22; border-color: rgba(230, 126, 34, 0.4);">VOTRE OUTIL MÉTIER — CLÉ EN MAIN</span>
+                </div>
+                <div class="journey-desc-list">
+                  <div><strong>Principe :</strong> Après validation du pilote, traitez vos dossiers en autonomie sur votre espace web sécurisé.</div>
+                  <div><strong>Fonctionnalités :</strong> PDF et scans → Excel structuré → anomalies → traçabilité ligne par ligne.</div>
+                  <div><strong>Zéro friction :</strong> Aucun serveur à acheter, aucun logiciel à installer, zéro clé API à configurer. <span class="pax-wordmark">Pax<span class="pax-suffix-fabrica">.Fabrica</span></span> héberge et maintient l’outil pour vous (*).</div>
+                  <div><strong>Règlement :</strong> 50 % d'acompte à la commande (Pilote déduit), solde à la livraison.</div>
+                  <div style="font-size: 0.82rem; color: var(--text-muted); opacity: 0.9;">(*) 1 an de service complet inclus dans l'offre (hébergement souverain, sécurité et maintenance).</div>
+                </div>
+              </div>
+              <div style="margin-top: 24px;">
+                <div class="project-card-tags">
+                  <span class="pill pill-extract">Extract</span>
+                  <span class="pill">Tarification sur devis</span>
+                  <span class="pill">Acompte 50 %</span>
+                  <span class="pill">Pilote déduit</span>
+                  <span class="pill">Espace Web Privé</span>
+                  <span class="pill">1 an inclus (*)</span>
+                </div>
+                <div class="project-card-action">
+                  <button type="button" class="btn btn-orange btn-full btn-lg" id="btnSelectModeDeploy" style="cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
+                    <span>Échanger pour déployer l'Outil ↗</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 9l-7 7-7-7"/></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 3: Step 3 (Extensions & Extensions Pax. - Full Width Horizontal) -->
+          <div class="glass-card journey-card journey-card-horizontal journey-card-3">
+            <div class="journey-card-left">
+              <div class="project-header-top" style="justify-content: center; text-align: center; gap: 14px;">
+                <svg viewBox="0 0 32 32" width="40" height="40" class="pax-temple-icon" aria-hidden="true">
+                  <path d="M16 3 L3 10 L29 10 Z" fill="currentColor"/>
+                  <circle cx="16" cy="7.5" r="1.3" fill="var(--bg-primary, #ffffff)"/>
+                  <rect x="4" y="11" width="24" height="1.8" fill="currentColor" rx="0.5"/>
+                  <rect x="5.5" y="14" width="2.8" height="10" fill="#e67e22" rx="0.6"/>
+                  <rect x="10.25" y="14" width="2.8" height="10" fill="#e74c3c" rx="0.6"/>
+                  <rect x="15" y="14" width="2.8" height="10" fill="#9b59b6" rx="0.6"/>
+                  <rect x="19.75" y="14" width="2.8" height="10" fill="#1abc9c" rx="0.6"/>
+                  <rect x="24.5" y="14" width="2.8" height="10" fill="#3498db" rx="0.6"/>
+                  <rect x="4" y="25" width="24" height="1.8" fill="currentColor" rx="0.5"/>
+                  <rect x="2" y="27.5" width="28" height="2" fill="currentColor" rx="0.5"/>
+                </svg>
+                <h3 class="project-card-title">3. La suite <span class="pax-wordmark">Pax<span class="pax-suffix-fabrica">.Fabrica</span></span></h3>
+              </div>
+              <div style="margin: 20px 0 24px 0; display: flex; justify-content: center;">
+                <span class="pill pill-evolution" style="padding: 6px 16px; letter-spacing: 0.08em; font-size: 0.76rem;">ÉVOLUTION DE LA PLATEFORME</span>
+              </div>
+              <div class="journey-desc-list" style="gap: 12px;">
+                <div style="margin-bottom: 12px; font-size: 0.93rem; line-height: 1.6; color: var(--text-main);">
+                  <strong>Principe :</strong> Vous n’achetez pas toute la plateforme aujourd’hui. Elle évolue selon vos priorités.
+                </div>
+                <div><strong><svg viewBox="0 0 32 32" width="18" height="18" class="pax-temple-icon" style="margin-right: 5px; vertical-align: -3px;" aria-hidden="true"><path d="M16 3 L3 10 L29 10 Z" fill="currentColor"/><circle cx="16" cy="7.5" r="1.3" fill="var(--bg-primary, #ffffff)"/><rect x="4" y="11" width="24" height="1.8" fill="currentColor" rx="0.5"/><rect x="5.5" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/><rect x="10.25" y="14" width="2.8" height="10" fill="#e74c3c" rx="0.6"/><rect x="15" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/><rect x="19.75" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/><rect x="24.5" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/><rect x="4" y="25" width="24" height="1.8" fill="currentColor" rx="0.5"/><rect x="2" y="27.5" width="28" height="2" fill="currentColor" rx="0.5"/></svg><span class="pax-wordmark">Pax<span class="pax-suffix-control">.Control</span></span> : Croisez les documents :</strong> Contrôle de cohérence croisée CCTP ↔ DPGF &amp; comparateur multi-offres entreprises (ACT).</div>
+                <div><strong><svg viewBox="0 0 32 32" width="18" height="18" class="pax-temple-icon" style="margin-right: 5px; vertical-align: -3px;" aria-hidden="true"><path d="M16 3 L3 10 L29 10 Z" fill="currentColor"/><circle cx="16" cy="7.5" r="1.3" fill="var(--bg-primary, #ffffff)"/><rect x="4" y="11" width="24" height="1.8" fill="currentColor" rx="0.5"/><rect x="5.5" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/><rect x="10.25" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/><rect x="15" y="14" width="2.8" height="10" fill="#9b59b6" rx="0.6"/><rect x="19.75" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/><rect x="24.5" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/><rect x="4" y="25" width="24" height="1.8" fill="currentColor" rx="0.5"/><rect x="2" y="27.5" width="28" height="2" fill="currentColor" rx="0.5"/></svg><span class="pax-wordmark">Pax<span class="pax-suffix-vision">.Vision</span></span> : Ajoutez les plans :</strong> Comptage automatisé d'équipements sur plans et rapprochement avec le DPGF.</div>
+                <div><strong><svg viewBox="0 0 32 32" width="18" height="18" class="pax-temple-icon" style="margin-right: 5px; vertical-align: -3px;" aria-hidden="true"><path d="M16 3 L3 10 L29 10 Z" fill="currentColor"/><circle cx="16" cy="7.5" r="1.3" fill="var(--bg-primary, #ffffff)"/><rect x="4" y="11" width="24" height="1.8" fill="currentColor" rx="0.5"/><rect x="5.5" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/><rect x="10.25" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/><rect x="15" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/><rect x="19.75" y="14" width="2.8" height="10" fill="#1abc9c" rx="0.6"/><rect x="24.5" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/><rect x="4" y="25" width="24" height="1.8" fill="currentColor" rx="0.5"/><rect x="2" y="27.5" width="28" height="2" fill="currentColor" rx="0.5"/></svg><span class="pax-wordmark">Pax<span class="pax-suffix-memory">.Memory</span></span> : Discutez avec vos archives :</strong> Retrouvez une clause ou un ratio de prix en 3 secondes dans vos anciens CCTP/DTU.</div>
+                <div><strong><svg viewBox="0 0 32 32" width="18" height="18" class="pax-temple-icon" style="margin-right: 5px; vertical-align: -3px;" aria-hidden="true"><path d="M16 3 L3 10 L29 10 Z" fill="currentColor"/><circle cx="16" cy="7.5" r="1.3" fill="var(--bg-primary, #ffffff)"/><rect x="4" y="11" width="24" height="1.8" fill="currentColor" rx="0.5"/><rect x="5.5" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/><rect x="10.25" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/><rect x="15" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/><rect x="19.75" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/><rect x="24.5" y="14" width="2.8" height="10" fill="#3498db" rx="0.6"/><rect x="4" y="25" width="24" height="1.8" fill="currentColor" rx="0.5"/><rect x="2" y="27.5" width="28" height="2" fill="currentColor" rx="0.5"/></svg><span class="pax-wordmark">Pax<span class="pax-suffix-agent">.Agent</span></span> : Automatisez vos tâches :</strong> Intégration sur-mesure à vos logiciels de chiffrage et automatisation de vos flux.</div>
+              </div>
+            </div>
+            <div class="journey-card-right">
+              <div class="project-card-tags" style="justify-content: flex-start; margin-bottom: 0;">
+                <span class="pill">Sur-mesure</span>
+                <span class="pill pill-control">Control</span>
+                <span class="pill pill-vision">Vision</span>
+                <span class="pill pill-memory">Memory</span>
+                <span class="pill pill-agent">Agent</span>
+              </div>
+              <div class="project-card-action">
+                <button type="button" class="btn btn-evolution btn-full btn-lg" id="btnSelectModeContact" style="cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
+                  <span>💬 Échanger sur votre projet ↗</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 9l-7 7-7-7"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Turnkey, Sovereign & Transparent Info Card -->
+        <div class="glass-card" style="margin-top: 32px; padding: 24px 28px; border-left: 4px solid var(--primary-color); background: rgba(99, 102, 241, 0.05);">
+          <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+            <span>🛡️</span> Une solution clé en main, souveraine et transparente
+          </h3>
+          <div style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.7;">
+            <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px;">
+              <li><strong style="color: var(--text-main);">Zéro installation :</strong> <span class="pax-wordmark">Pax<span class="pax-suffix-fabrica">.Fabrica</span></span> gère l'hébergement, la sécurité et la maintenance. Pas de serveur à acheter · Pas de logiciel à installer · Pas de clé API à gérer.</li>
+              <li><strong style="color: var(--text-main);">100 % français &amp; sécurisé :</strong> serveurs (Scaleway) et IA (Mistral) hébergés en France, conformes aux exigences européennes sur le secret des affaires.</li>
+              <li><strong style="color: var(--text-main);">Transparence totale :</strong> socle technique souverain et auditable, reposant exclusivement sur des composants open source robustes et éprouvés.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Legal Tax Notice -->
+        <div class="offers-tax-notice" style="text-align: center; margin-top: 24px; font-size: 0.85rem; color: var(--text-muted); opacity: 0.85;">
+          <span>Tarification et devis personnalisés sur demande — TVA non applicable, art. 293 B du CGI</span>
+        </div>
+
+        <!-- Modal Overlay for Gateway Direct Booking, Pilot Ingestion & Contact -->
+        <div id="gatewayModalOverlay" class="gateway-modal-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="gatewayModalTitle">
+          <div class="gateway-modal-backdrop" id="gatewayModalBackdrop"></div>
+          <div class="gateway-modal-dialog">
+            <!-- Interactive Gateway Booking Card -->
+            <div class="gateway-booking-card" id="gatewayBookingCard">
+              <!-- Mode Toggle Switcher + Dynamic info box in the same frame -->
+              <div class="gateway-mode-box">
+                <div class="gateway-mode-top-row">
+                  <!-- Mode Toggle Switcher with 3 options (1, 2, 3) -->
+                  <div class="gateway-mode-selector">
+                    <button type="button" class="gateway-mode-btn mode-demo" id="modeBtnDemo" style="display: none;">
+                      <span>🖥️ 0. Démo 15 min</span>
+                    </button>
+                    <button type="button" class="gateway-mode-btn mode-pilote active" id="modeBtnPilote">
+                      <span>⏱️ 1. Pilote 48 h</span>
+                    </button>
+                    <button type="button" class="gateway-mode-btn mode-deploy" id="modeBtnDeploy">
+                      <svg viewBox="0 0 32 32" width="16" height="16" class="pax-temple-icon" aria-hidden="true" style="vertical-align: -2px; flex-shrink: 0;"><path d="M16 3 L3 10 L29 10 Z" fill="currentColor"/><circle cx="16" cy="7.5" r="1.3" fill="var(--bg-primary, #ffffff)"/><rect x="4" y="11" width="24" height="1.8" fill="currentColor" rx="0.5"/><rect x="5.5" y="14" width="2.8" height="10" fill="#e67e22" rx="0.6"/><rect x="10.25" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/><rect x="15" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/><rect x="19.75" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/><rect x="24.5" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/><rect x="4" y="25" width="24" height="1.8" fill="currentColor" rx="0.5"/><rect x="2" y="27.5" width="28" height="2" fill="currentColor" rx="0.5"/></svg>
+                      <span>2. <span class="pax-wordmark">Pax<span class="pax-suffix-extract">.Extract</span></span></span>
+                    </button>
+                    <button type="button" class="gateway-mode-btn mode-contact" id="modeBtnContact">
+                      <svg viewBox="0 0 32 32" width="16" height="16" class="pax-temple-icon" aria-hidden="true" style="vertical-align: -2px; flex-shrink: 0;"><path d="M16 3 L3 10 L29 10 Z" fill="currentColor"/><circle cx="16" cy="7.5" r="1.3" fill="var(--bg-primary, #ffffff)"/><rect x="4" y="11" width="24" height="1.8" fill="currentColor" rx="0.5"/><rect x="5.5" y="14" width="2.8" height="10" fill="#e67e22" rx="0.6"/><rect x="10.25" y="14" width="2.8" height="10" fill="#e74c3c" rx="0.6"/><rect x="15" y="14" width="2.8" height="10" fill="#9b59b6" rx="0.6"/><rect x="19.75" y="14" width="2.8" height="10" fill="#1abc9c" rx="0.6"/><rect x="24.5" y="14" width="2.8" height="10" fill="#3498db" rx="0.6"/><rect x="4" y="25" width="24" height="1.8" fill="currentColor" rx="0.5"/><rect x="2" y="27.5" width="28" height="2" fill="currentColor" rx="0.5"/></svg>
+                      <span>3. Extensions</span>
+                    </button>
+                  </div>
+                  <button type="button" class="gateway-modal-close" id="btnCloseGatewayModal" aria-label="Fermer la fenêtre">✕</button>
+                </div>
+                <!-- Dynamic info integrated into the same box under the buttons -->
+                <div class="gateway-mode-info">
+                  <h4 class="gateway-mode-info-title" id="gatewayModalTitle">1. Lancer votre Pilote Flash 48 h</h4>
+                  <p class="gateway-mode-info-subtitle" id="gatewayModalSubtitle">Déposez vos DPGF, BPU, DQE ou scans. Livraison sous 48h du fichier Excel structuré et du rapport d'anomalies (100 % déduit de l'Outil Métier).</p>
+                </div>
+              </div>
+
+              <form id="gatewayBookingForm" novalidate>
+                <!-- Honeypot invisible pour contrer les robots automatisés -->
+                <input type="text" name="website_url" style="display:none !important;" tabindex="-1" autocomplete="off">
+
+                <div class="gateway-form-grid">
+                  <div class="gateway-input-group" id="gatewaySlotGroup" style="display: none;">
+                    <label for="gatewaySlotSelect" id="gatewaySlotLabel" class="gateway-label">1. Créneau de démo disponible *</label>
+                    <select id="gatewaySlotSelect" name="slotId" class="gateway-select">
+                      <option value="">Chargement des créneaux en direct...</option>
+                    </select>
+                  </div>
+
+                  <div class="gateway-input-group">
+                    <label for="gatewayNameInput" class="gateway-label">2. Nom &amp; Prénom *</label>
+                    <input type="text" id="gatewayNameInput" name="name" class="gateway-input" placeholder="ex. Jean Dupont" required>
+                  </div>
+
+                  <div class="gateway-input-group">
+                    <label for="gatewayEmailInput" class="gateway-label">3. Adresse e-mail professionnelle *</label>
+                    <input type="email" id="gatewayEmailInput" name="email" class="gateway-input" placeholder="jean.dupont@entreprise-btp.fr" required>
+                  </div>
+
+                  <div class="gateway-input-group">
+                    <label for="gatewayCompanyInput" class="gateway-label">4. Société / Bureau d'études</label>
+                    <input type="text" id="gatewayCompanyInput" name="company" class="gateway-input" placeholder="ex. Dupont Ingénierie BTP">
+                  </div>
+                </div>
+
+                <!-- DPGF PDF/Excel File Upload Dropzone -->
+                <div class="gateway-file-wrapper" id="gatewayDropzoneGroup">
+                  <label class="gateway-label" id="gatewayFileLabel">5. Joindre vos dossiers DPGF, BPU, DQE ou scans (PDF, Excel ou Image, max 50 Mo) *</label>
+                  <div class="gateway-file-dropzone" id="gatewayFileDropzone" onclick="document.getElementById('gatewayPdfInput').click()">
+                    <div class="gateway-file-icon">📄</div>
+                    <div class="gateway-file-text">Cliquez ou glissez-déposez vos fichiers (PDF, Excel, Scans JPG/PNG) ici</div>
+                    <div class="gateway-file-subtext">Formats acceptés : PDF, XLSX, XLS, CSV, ODS, JPG, PNG — Max 50 Mo</div>
+                    <input type="file" id="gatewayPdfInput" name="pdfFiles" multiple accept=".pdf,.xlsx,.xls,.csv,.ods,.png,.jpg,.jpeg,image/png,image/jpeg,application/pdf,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel" style="display:none;">
+                  </div>
+                  <div id="gatewayFileSelectedDisplay" class="gateway-file-selected" style="display: none;"></div>
+                </div>
+
+                <!-- Message / Notes text area -->
+                <div class="gateway-input-group" id="gatewayMessageGroup" style="margin-top: 16px;">
+                  <label for="gatewayMessageInput" id="gatewayMessageLabel" class="gateway-label">6. Précisions sur votre dossier (Optionnel)</label>
+                  <textarea id="gatewayMessageInput" name="message" class="gateway-input" rows="3" placeholder="Précisez votre demande, vos questions ou particularités..." style="resize: vertical; font-family: inherit;"></textarea>
+                </div>
+
+                <!-- Feedback Notification Banner -->
+                <div id="gatewayFeedback" class="gateway-feedback-banner"></div>
+
+                <div class="gateway-actions">
+                  <button type="submit" id="btnSubmitGatewayBooking" class="btn btn-primary btn-lg btn-disabled" style="width: 100%; cursor: not-allowed; opacity: 0.6;" disabled aria-disabled="true">
+                    <span>Transmettre les fichiers &amp; Lancer le Pilote 48h</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Family Section -->
+    <section class="section pax-family-section" id="produit">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge badge-accent">LA SUITE PAX.FABRICA</div>
+          <h2 class="section-title">Une plateforme qui évolue avec vos besoins.</h2>
+          <p class="section-subtitle">Vous commencez par l’extraction. Les autres briques arrivent quand elles ont une valeur concrète pour votre flux de travail.</p>
+        </div>
+        <div class="pax-family-grid">
+          <div class="glass-card pax-module pax-module-1 pax-module-active" data-pax-target="extract" tabindex="0" role="button" aria-expanded="true">
+            <div class="pax-module-index">01</div>
+            <div class="pax-module-icon-wrap">
+              <svg viewBox="0 0 32 32" width="48" height="48" class="pax-temple-icon" aria-hidden="true">
+                <path d="M16 3 L3 10 L29 10 Z" fill="currentColor"/>
+                <circle cx="16" cy="7.5" r="1.3" fill="var(--bg-primary, #ffffff)"/>
+                <rect x="4" y="11" width="24" height="1.8" fill="currentColor" rx="0.5"/>
+                <rect x="5.5" y="14" width="2.8" height="10" fill="#e67e22" rx="0.6"/>
+                <rect x="10.25" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/>
+                <rect x="15" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/>
+                <rect x="19.75" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/>
+                <rect x="24.5" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/>
+                <rect x="4" y="25" width="24" height="1.8" fill="currentColor" rx="0.5"/>
+                <rect x="2" y="27.5" width="28" height="2" fill="currentColor" rx="0.5"/>
+              </svg>
+            </div>
+            <h3><span class="pax-wordmark">Pax<span class="pax-suffix-extract">.Extract</span></span></h3>
+            <p>Extraire</p>
+            <strong>Disponible</strong>
+          </div>
+          <div class="glass-card pax-module pax-module-2" data-pax-target="control" tabindex="0" role="button" aria-expanded="false">
+            <div class="pax-module-index">02</div>
+            <div class="pax-module-icon-wrap">
+              <svg viewBox="0 0 32 32" width="48" height="48" class="pax-temple-icon" aria-hidden="true">
+                <path d="M16 3 L3 10 L29 10 Z" fill="currentColor"/>
+                <circle cx="16" cy="7.5" r="1.3" fill="var(--bg-primary, #ffffff)"/>
+                <rect x="4" y="11" width="24" height="1.8" fill="currentColor" rx="0.5"/>
+                <rect x="5.5" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/>
+                <rect x="10.25" y="14" width="2.8" height="10" fill="#e74c3c" rx="0.6"/>
+                <rect x="15" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/>
+                <rect x="19.75" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/>
+                <rect x="24.5" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/>
+                <rect x="4" y="25" width="24" height="1.8" fill="currentColor" rx="0.5"/>
+                <rect x="2" y="27.5" width="28" height="2" fill="currentColor" rx="0.5"/>
+              </svg>
+            </div>
+            <h3><span class="pax-wordmark">Pax<span class="pax-suffix-control">.Control</span></span></h3>
+            <p>Vérifier</p>
+            <strong>En préparation</strong>
+          </div>
+          <div class="glass-card pax-module pax-module-3" data-pax-target="vision" tabindex="0" role="button" aria-expanded="false">
+            <div class="pax-module-index">03</div>
+            <div class="pax-module-icon-wrap">
+              <svg viewBox="0 0 32 32" width="48" height="48" class="pax-temple-icon" aria-hidden="true">
+                <path d="M16 3 L3 10 L29 10 Z" fill="currentColor"/>
+                <circle cx="16" cy="7.5" r="1.3" fill="var(--bg-primary, #ffffff)"/>
+                <rect x="4" y="11" width="24" height="1.8" fill="currentColor" rx="0.5"/>
+                <rect x="5.5" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/>
+                <rect x="10.25" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/>
+                <rect x="15" y="14" width="2.8" height="10" fill="#9b59b6" rx="0.6"/>
+                <rect x="19.75" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/>
+                <rect x="24.5" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/>
+                <rect x="4" y="25" width="24" height="1.8" fill="currentColor" rx="0.5"/>
+                <rect x="2" y="27.5" width="28" height="2" fill="currentColor" rx="0.5"/>
+              </svg>
+            </div>
+            <h3><span class="pax-wordmark">Pax<span class="pax-suffix-vision">.Vision</span></span></h3>
+            <p>Voir</p>
+            <strong>R&amp;D</strong>
+          </div>
+          <div class="glass-card pax-module pax-module-4" data-pax-target="memory" tabindex="0" role="button" aria-expanded="false">
+            <div class="pax-module-index">04</div>
+            <div class="pax-module-icon-wrap">
+              <svg viewBox="0 0 32 32" width="48" height="48" class="pax-temple-icon" aria-hidden="true">
+                <path d="M16 3 L3 10 L29 10 Z" fill="currentColor"/>
+                <circle cx="16" cy="7.5" r="1.3" fill="var(--bg-primary, #ffffff)"/>
+                <rect x="4" y="11" width="24" height="1.8" fill="currentColor" rx="0.5"/>
+                <rect x="5.5" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/>
+                <rect x="10.25" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/>
+                <rect x="15" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/>
+                <rect x="19.75" y="14" width="2.8" height="10" fill="#1abc9c" rx="0.6"/>
+                <rect x="24.5" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/>
+                <rect x="4" y="25" width="24" height="1.8" fill="currentColor" rx="0.5"/>
+                <rect x="2" y="27.5" width="28" height="2" fill="currentColor" rx="0.5"/>
+              </svg>
+            </div>
+            <h3><span class="pax-wordmark">Pax<span class="pax-suffix-memory">.Memory</span></span></h3>
+            <p>Trouver</p>
+            <strong>Extension</strong>
+          </div>
+          <div class="glass-card pax-module pax-module-5" data-pax-target="agent" tabindex="0" role="button" aria-expanded="false">
+            <div class="pax-module-index">05</div>
+            <div class="pax-module-icon-wrap">
+              <svg viewBox="0 0 32 32" width="48" height="48" class="pax-temple-icon" aria-hidden="true">
+                <path d="M16 3 L3 10 L29 10 Z" fill="currentColor"/>
+                <circle cx="16" cy="7.5" r="1.3" fill="var(--bg-primary, #ffffff)"/>
+                <rect x="4" y="11" width="24" height="1.8" fill="currentColor" rx="0.5"/>
+                <rect x="5.5" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/>
+                <rect x="10.25" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/>
+                <rect x="15" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/>
+                <rect x="19.75" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/>
+                <rect x="24.5" y="14" width="2.8" height="10" fill="#3498db" rx="0.6"/>
+                <rect x="4" y="25" width="24" height="1.8" fill="currentColor" rx="0.5"/>
+                <rect x="2" y="27.5" width="28" height="2" fill="currentColor" rx="0.5"/>
+              </svg>
+            </div>
+            <h3><span class="pax-wordmark">Pax<span class="pax-suffix-agent">.Agent</span></span></h3>
+            <p>Agir</p>
+            <strong>Extension</strong>
+          </div>
+        </div>
+
+        <!-- Dynamic Module Details Panel -->
+        <div class="pax-module-detail-container">
+          <!-- Panel 1: Pax.Extract -->
+          <div class="pax-module-detail-panel pax-detail-1 active" id="paxPanel-extract">
+            <div class="pax-module-detail-header">
+              <h3 class="pax-module-detail-title">
+                <svg viewBox="0 0 32 32" width="32" height="32" class="pax-temple-icon" style="margin-right: 8px; vertical-align: -5px;" aria-hidden="true">
+                  <path d="M16 3 L3 10 L29 10 Z" fill="currentColor"/>
+                  <circle cx="16" cy="7.5" r="1.3" fill="var(--bg-primary, #ffffff)"/>
+                  <rect x="4" y="11" width="24" height="1.8" fill="currentColor" rx="0.5"/>
+                  <rect x="5.5" y="14" width="2.8" height="10" fill="#e67e22" rx="0.6"/>
+                  <rect x="10.25" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/>
+                  <rect x="15" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/>
+                  <rect x="19.75" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/>
+                  <rect x="24.5" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/>
+                  <rect x="4" y="25" width="24" height="1.8" fill="currentColor" rx="0.5"/>
+                  <rect x="2" y="27.5" width="28" height="2" fill="currentColor" rx="0.5"/>
+                </svg>
+                <span class="pax-wordmark">Pax<span class="pax-suffix-extract">.Extract</span></span> — Extraction structurée &amp; traçabilité documentaire
+              </h3>
+              <span class="pax-module-detail-badge" style="background: rgba(230, 126, 34, 0.15); color: #e67e22; border: 1px solid rgba(230, 126, 34, 0.4);">Disponible</span>
+            </div>
+            <ul class="pax-module-detail-list">
+              <li class="pax-module-detail-item">
+                <span class="pax-module-detail-bullet">•</span>
+                <span><strong>Ingestion universelle :</strong> Traitement des fichiers PDF et scans de pièces quantitatives et financières : DPGF, BPU, DQE.</span>
+              </li>
+              <li class="pax-module-detail-item">
+                <span class="pax-module-detail-bullet">•</span>
+                <span><strong>Export Excel natif :</strong> Restitution structurée avec formules de calcul prêtes à l'emploi.</span>
+              </li>
+              <li class="pax-module-detail-item">
+                <span class="pax-module-detail-bullet">•</span>
+                <span><strong>Contrôle automatisé :</strong> Détection des anomalies de calcul, totaux erronés et doublons.</span>
+              </li>
+              <li class="pax-module-detail-item">
+                <span class="pax-module-detail-bullet">•</span>
+                <span><strong>Pointage &amp; traçabilité :</strong> Traçabilité ligne par ligne vers la page source exacte dans le PDF.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Panel 2: Pax.Control -->
+          <div class="pax-module-detail-panel pax-detail-2" id="paxPanel-control">
+            <div class="pax-module-detail-header">
+              <h3 class="pax-module-detail-title">
+                <svg viewBox="0 0 32 32" width="32" height="32" class="pax-temple-icon" style="margin-right: 8px; vertical-align: -5px;" aria-hidden="true">
+                  <path d="M16 3 L3 10 L29 10 Z" fill="currentColor"/>
+                  <circle cx="16" cy="7.5" r="1.3" fill="var(--bg-primary, #ffffff)"/>
+                  <rect x="4" y="11" width="24" height="1.8" fill="currentColor" rx="0.5"/>
+                  <rect x="5.5" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/>
+                  <rect x="10.25" y="14" width="2.8" height="10" fill="#e74c3c" rx="0.6"/>
+                  <rect x="15" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/>
+                  <rect x="19.75" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/>
+                  <rect x="24.5" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/>
+                  <rect x="4" y="25" width="24" height="1.8" fill="currentColor" rx="0.5"/>
+                  <rect x="2" y="27.5" width="28" height="2" fill="currentColor" rx="0.5"/>
+                </svg>
+                <span class="pax-wordmark">Pax<span class="pax-suffix-control">.Control</span></span> — Contrôle croisé CCTP ↔ DPGF &amp; analyse des offres
+              </h3>
+              <span class="pax-module-detail-badge" style="background: rgba(231, 76, 60, 0.15); color: #e74c3c; border: 1px solid rgba(231, 76, 60, 0.4);">En préparation</span>
+            </div>
+            <ul class="pax-module-detail-list">
+              <li class="pax-module-detail-item">
+                <span class="pax-module-detail-bullet">•</span>
+                <span><strong>Cohérence documentaire :</strong> Contrôle de cohérence croisée CCTP ↔ DPGF (postes oubliés, incohérences de libellés).</span>
+              </li>
+              <li class="pax-module-detail-item">
+                <span class="pax-module-detail-bullet">•</span>
+                <span><strong>Dépouillement des offres :</strong> Dépouillement &amp; comparateur multi-offres entreprises (analyse en phase ACT).</span>
+              </li>
+              <li class="pax-module-detail-item">
+                <span class="pax-module-detail-bullet">•</span>
+                <span><strong>Détection des anomalies :</strong> Détection immédiate des écarts de prix suspects et postes sous-évalués.</span>
+              </li>
+              <li class="pax-module-detail-item">
+                <span class="pax-module-detail-bullet">•</span>
+                <span><strong>Rapports d'analyse :</strong> Fiches de synthèse claires prêtes pour vos choix d'attribution.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Panel 3: Pax.Vision -->
+          <div class="pax-module-detail-panel pax-detail-3" id="paxPanel-vision">
+            <div class="pax-module-detail-header">
+              <h3 class="pax-module-detail-title">
+                <svg viewBox="0 0 32 32" width="32" height="32" class="pax-temple-icon" style="margin-right: 8px; vertical-align: -5px;" aria-hidden="true">
+                  <path d="M16 3 L3 10 L29 10 Z" fill="currentColor"/>
+                  <circle cx="16" cy="7.5" r="1.3" fill="var(--bg-primary, #ffffff)"/>
+                  <rect x="4" y="11" width="24" height="1.8" fill="currentColor" rx="0.5"/>
+                  <rect x="5.5" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/>
+                  <rect x="10.25" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/>
+                  <rect x="15" y="14" width="2.8" height="10" fill="#9b59b6" rx="0.6"/>
+                  <rect x="19.75" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/>
+                  <rect x="24.5" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/>
+                  <rect x="4" y="25" width="24" height="1.8" fill="currentColor" rx="0.5"/>
+                  <rect x="2" y="27.5" width="28" height="2" fill="currentColor" rx="0.5"/>
+                </svg>
+                <span class="pax-wordmark">Pax<span class="pax-suffix-vision">.Vision</span></span> — Analyse visuelle de plans &amp; pré-métrés assistés
+              </h3>
+              <span class="pax-module-detail-badge" style="background: rgba(155, 89, 182, 0.15); color: #9b59b6; border: 1px solid rgba(155, 89, 182, 0.4);">R&amp;D</span>
+            </div>
+            <ul class="pax-module-detail-list">
+              <li class="pax-module-detail-item">
+                <span class="pax-module-detail-bullet">•</span>
+                <span><strong>Comptage automatique :</strong> Comptage d'équipements sur plans (portes, sanitaires, prises).</span>
+              </li>
+              <li class="pax-module-detail-item">
+                <span class="pax-module-detail-bullet">•</span>
+                <span><strong>Rapprochement avec le DPGF :</strong> Rapprochement direct entre les quantités sur plan et quantités DPGF.</span>
+              </li>
+              <li class="pax-module-detail-item">
+                <span class="pax-module-detail-bullet">•</span>
+                <span><strong>Contrôle rapide :</strong> Vérification visuelle immédiate des métrés avant validation.</span>
+              </li>
+              <li class="pax-module-detail-item">
+                <span class="pax-module-detail-bullet">•</span>
+                <span><strong>Gain de temps :</strong> Automatisation des tâches de repérage et de comptage répétitif.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Panel 4: Pax.Memory -->
+          <div class="pax-module-detail-panel pax-detail-4" id="paxPanel-memory">
+            <div class="pax-module-detail-header">
+              <h3 class="pax-module-detail-title">
+                <svg viewBox="0 0 32 32" width="32" height="32" class="pax-temple-icon" style="margin-right: 8px; vertical-align: -5px;" aria-hidden="true">
+                  <path d="M16 3 L3 10 L29 10 Z" fill="currentColor"/>
+                  <circle cx="16" cy="7.5" r="1.3" fill="var(--bg-primary, #ffffff)"/>
+                  <rect x="4" y="11" width="24" height="1.8" fill="currentColor" rx="0.5"/>
+                  <rect x="5.5" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/>
+                  <rect x="10.25" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/>
+                  <rect x="15" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/>
+                  <rect x="19.75" y="14" width="2.8" height="10" fill="#1abc9c" rx="0.6"/>
+                  <rect x="24.5" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/>
+                  <rect x="4" y="25" width="24" height="1.8" fill="currentColor" rx="0.5"/>
+                  <rect x="2" y="27.5" width="28" height="2" fill="currentColor" rx="0.5"/>
+                </svg>
+                <span class="pax-wordmark">Pax<span class="pax-suffix-memory">.Memory</span></span> — Discutez avec vos archives &amp; capitalisez votre historique
+              </h3>
+              <span class="pax-module-detail-badge" style="background: rgba(26, 188, 156, 0.15); color: #1abc9c; border: 1px solid rgba(26, 188, 156, 0.4);">Extension</span>
+            </div>
+            <ul class="pax-module-detail-list">
+              <li class="pax-module-detail-item">
+                <span class="pax-module-detail-bullet">•</span>
+                <span><strong>Recherche intelligente :</strong> Recherche rapide dans les archives du cabinet (anciens CCTP, ratios de prix).</span>
+              </li>
+              <li class="pax-module-detail-item">
+                <span class="pax-module-detail-bullet">•</span>
+                <span><strong>Trouver des clauses :</strong> Trouver des clauses techniques ou retours d'expériences passés en quelques secondes.</span>
+              </li>
+              <li class="pax-module-detail-item">
+                <span class="pax-module-detail-bullet">•</span>
+                <span><strong>Historique de ratios :</strong> Comparaison et repères sur les coûts réels de vos chantiers passés.</span>
+              </li>
+              <li class="pax-module-detail-item">
+                <span class="pax-module-detail-bullet">•</span>
+                <span><strong>Capitalisation :</strong> Vos archives deviennent un référentiel consultable directement en langage clair.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Panel 5: Pax.Agent -->
+          <div class="pax-module-detail-panel pax-detail-5" id="paxPanel-agent">
+            <div class="pax-module-detail-header">
+              <h3 class="pax-module-detail-title">
+                <svg viewBox="0 0 32 32" width="32" height="32" class="pax-temple-icon" style="margin-right: 8px; vertical-align: -5px;" aria-hidden="true">
+                  <path d="M16 3 L3 10 L29 10 Z" fill="currentColor"/>
+                  <circle cx="16" cy="7.5" r="1.3" fill="var(--bg-primary, #ffffff)"/>
+                  <rect x="4" y="11" width="24" height="1.8" fill="currentColor" rx="0.5"/>
+                  <rect x="5.5" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/>
+                  <rect x="10.25" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/>
+                  <rect x="15" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/>
+                  <rect x="19.75" y="14" width="2.8" height="10" fill="currentColor" rx="0.6"/>
+                  <rect x="24.5" y="14" width="2.8" height="10" fill="#3498db" rx="0.6"/>
+                  <rect x="4" y="25" width="24" height="1.8" fill="currentColor" rx="0.5"/>
+                  <rect x="2" y="27.5" width="28" height="2" fill="currentColor" rx="0.5"/>
+                </svg>
+                <span class="pax-wordmark">Pax<span class="pax-suffix-agent">.Agent</span></span> — Automatisation de vos flux &amp; connexion à vos outils métier
+              </h3>
+              <span class="pax-module-detail-badge" style="background: rgba(52, 152, 219, 0.15); color: #3498db; border: 1px solid rgba(52, 152, 219, 0.4);">Extension</span>
+            </div>
+            <ul class="pax-module-detail-list">
+              <li class="pax-module-detail-item">
+                <span class="pax-module-detail-bullet">•</span>
+                <span><strong>Connexion à votre espace :</strong> Connexion directe avec vos outils de travail (dossiers partagés, logiciels de chiffrage, GED).</span>
+              </li>
+              <li class="pax-module-detail-item">
+                <span class="pax-module-detail-bullet">•</span>
+                <span><strong>Automatisation sur-mesure :</strong> Automatisation d'actions répétitives (préparer vos imports, structurer les données).</span>
+              </li>
+              <li class="pax-module-detail-item">
+                <span class="pax-module-detail-bullet">•</span>
+                <span><strong>Génération documentaire :</strong> Génération automatique de comptes-rendus et fiches récapitulatives.</span>
+              </li>
+              <li class="pax-module-detail-item">
+                <span class="pax-module-detail-bullet">•</span>
+                <span><strong>Sans friction :</strong> Conçu pour s'adapter à vos habitudes sans perturber vos logiciels actuels.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROI Calculator Section -->     <section class="section" id="roi">       <div class="container">         <div class="section-header">           <div class="badge">Calculateur ROI</div>           <h2 class="section-title">Combien vous coûte réellement la ressaisie ?</h2>           <p class="section-subtitle">Estimez la capacité de travail potentiellement libérée. Le gain réel est mesuré lors de votre pilote.</p>         </div>          <div class="glass-card roi-card">           <div class="roi-inputs">             <div class="roi-slider-group">               <div class="roi-slider-label">                 <span>Nombre de collaborateurs concernés :</span>                 <span id="valStaff" class="roi-slider-val">3 personnes</span>               </div>               <input type="range" id="sliderStaff" min="1" max="20" value="3" class="roi-slider-input">             </div>              <div class="roi-slider-group">               <div class="roi-slider-label">                 <span>Heures de saisie &amp; vérification / personne / semaine :</span>                 <span id="valHours" class="roi-slider-val">10 h / semaine</span>               </div>               <input type="range" id="sliderHours" min="2" max="30" value="10" class="roi-slider-input">             </div>           </div>            <div class="roi-results-box">             <div>               <div class="roi-result-metric" id="roiHoursVal">648 h</div>               <div class="roi-result-sub">Heures potentiellement libérées par an</div>             </div>             <div style="border-top: 1px dashed rgba(255,255,255,0.15); margin-top: 12px; padding-top: 12px;">               <div class="roi-result-metric" style="color: var(--primary-color);" id="roiEuroVal">22 680 €</div>               <div class="roi-result-sub">Valeur indicative de capacité de travail libérée</div>             </div>           </div>         </div>          <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 16px; text-align: center;">           * Note : Estimation indicative avant pilote. Le gain réel est mesuré sur vos propres dossiers.         </p>       </div>     </section>    <!-- FAQ -->
+    <section class="section faq-section" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge">FAQ</div>
+          <h2 class="section-title">Les questions avant de tester.</h2>
+        </div>
+        <div class="tech-accordion">
+          <div class="accordion-item"><button class="accordion-header" type="button"><span>Faut-il envoyer trois dossiers dès le départ ?</span><span class="accordion-icon">▼</span></button><div class="accordion-content"><p>Non. Le pilote démarre avec un seul dossier. Vous pouvez ensuite tester jusqu’à 3 dossiers au total, dans la limite de 500 pages et pendant 30 jours.</p></div></div>
+          <div class="accordion-item"><button class="accordion-header" type="button"><span>Que se passe-t-il si l’IA se trompe ?</span><span class="accordion-icon">▼</span></button><div class="accordion-content"><p>Les données incertaines ou incohérentes sont signalées. Chaque extraction reste traçable vers sa source afin que vous puissiez vérifier avant utilisation.</p></div></div>
+          <div class="accordion-item"><button class="accordion-header" type="button"><span>Le montant du diagnostic est-il déductible en cas de mise en production ?</span><span class="accordion-icon">▼</span></button><div class="accordion-content"><p>Le pilote est une prestation de preuve sur vos dossiers. Si vous passez ensuite en production, l'intégralité du montant du diagnostic est déduite de la mise en production de votre outil métier (règlement avec 50 % d'acompte à la commande, solde à la livraison).</p></div></div>
+          <div class="accordion-item"><button class="accordion-header" type="button"><span>Faut-il installer un logiciel ou une clé API ?</span><span class="accordion-icon">▼</span></button><div class="accordion-content"><p>Non. L’objectif de l’offre en production est un espace web clé en main, sans serveur à acheter, sans logiciel à installer et sans clé API à configurer.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section final-cta-section">
+      <div class="container">
+        <div class="glass-card final-cta-card">
+          <div class="badge badge-accent">PRÊT À TESTER ?</div>
+          <h2>Vous avez un DPGF sous la main ?</h2>
+          <p>Commencez avec votre premier dossier. Premier livrable sous 48 h ouvrées.</p>
+          <a href="#rdv" class="btn btn-green btn-lg">Lancer votre diagnostic pilote <span>→</span></a>
+          <small>1–3 dossiers · 500 pages max · 30 jours · Diagnostic 100 % déduit de la mise en production</small>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-info" style="width: 100%;">
+        <p style="display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap;">
+          <img src="./favicon.svg" alt="Pax Fabrica" class="logo-favicon" style="width: 22px; height: 22px; filter: drop-shadow(0 1px 3px rgba(0,0,0,0.15));">
+          <span class="pax-wordmark">Pax<span class="pax-suffix-fabrica">.Fabrica</span></span> — IA documentaire pour le BTP — 2026
+          <button class="theme-toggle-btn footer-theme-toggle" type="button" aria-label="Passer au mode sombre" title="Passer au mode sombre" style="display: inline-flex; align-items: center; justify-content: center; padding: 4px 8px; border-radius: 8px; margin-left: 4px;">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </p>
+        <p class="footer-sub" style="text-align: center;">
+          <span>Hébergement web via GitHub Pages · Infrastructure applicative via Scaleway (France)</span> ·
+          <a href="./legal.html#mentions" style="color: var(--text-muted); text-decoration: underline;">Mentions Légales</a> ·
+          <a href="./legal.html#cgv" style="color: var(--text-muted); text-decoration: underline;">CGV / CGP</a> ·
+          <a href="./legal.html#confidentialite" style="color: var(--text-muted); text-decoration: underline;">Confidentialité &amp; RGPD</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Robust Accordion Toggle with Event Delegation (Works for FAQ & Tech Accordion)
+    document.addEventListener('click', (e) => {
+      const header = e.target.closest('.accordion-header');
+      if (header) {
+        const item = header.closest('.accordion-item');
+        if (item) {
+          item.classList.toggle('active');
+        }
+      }
+    });
+
+    // ROI Calculator Logic
+    function initRoiCalculator() {
+      const staffInput = document.getElementById('sliderStaff');
+      const hoursInput = document.getElementById('sliderHours');
+      const valStaff = document.getElementById('valStaff');
+      const valHours = document.getElementById('valHours');
+      const roiHoursVal = document.getElementById('roiHoursVal');
+      const roiEuroVal = document.getElementById('roiEuroVal');
+
+      function updateRoi() {
+        if (!staffInput || !hoursInput) return;
+        const staff = parseInt(staffInput.value, 10);
+        const hoursPerWeek = parseInt(hoursInput.value, 10);
+
+        valStaff.textContent = staff + (staff > 1 ? ' personnes' : ' personne');
+        valHours.textContent = hoursPerWeek + ' h / semaine';
+
+        // 48 working weeks / year, 45% time saved via automation
+        const yearlySavedHours = Math.round(staff * hoursPerWeek * 48 * 0.45);
+        const yearlySavedEuros = Math.round(yearlySavedHours * 35); // 35€/h cost basis
+
+        roiHoursVal.textContent = yearlySavedHours.toLocaleString('fr-FR') + ' h';
+        roiEuroVal.textContent = yearlySavedEuros.toLocaleString('fr-FR') + ' €';
+      }
+
+      if (staffInput && hoursInput) {
+        staffInput.addEventListener('input', updateRoi);
+        hoursInput.addEventListener('input', updateRoi);
+        updateRoi();
+      }
+    }
+
+    // Pax Suite Interactive Module Switcher
+    function initPaxSuiteTabs() {
+      const modules = document.querySelectorAll('.pax-module[data-pax-target]');
+      const panels = document.querySelectorAll('.pax-module-detail-panel');
+      if (!modules.length || !panels.length) return;
+
+      modules.forEach((mod) => {
+        mod.addEventListener('click', () => {
+          const target = mod.getAttribute('data-pax-target');
+          modules.forEach((m) => {
+            m.classList.remove('pax-module-active');
+            m.setAttribute('aria-expanded', 'false');
+          });
+          panels.forEach((p) => p.classList.remove('active'));
+
+          mod.classList.add('pax-module-active');
+          mod.setAttribute('aria-expanded', 'true');
+          const activePanel = document.getElementById('paxPanel-' + target);
+          if (activePanel) {
+            activePanel.classList.add('active');
+          }
+        });
+
+        mod.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            mod.click();
+          }
+        });
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        initRoiCalculator();
+        initPaxSuiteTabs();
+      });
+    } else {
+      initRoiCalculator();
+      initPaxSuiteTabs();
+    }
+  </script>
+</body>
+</html>
